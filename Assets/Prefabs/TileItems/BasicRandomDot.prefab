@@ -53,4 +53,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSlot: {fileID: 0}
   possibleItems:
-  - {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02, type: 2}
+  - {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21, type: 2}
+  - {fileID: 114175546146310956, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
+  - {fileID: 114102784754513410, guid: 5ef5375bf01c4064c8245dec2a79aa2d, type: 2}
+  - {fileID: 114516643961163470, guid: 1f79c9da96a34df48b3dbbc13cf27a17, type: 2}
+  - {fileID: 114283503376556982, guid: 78f6db62fe6ceb04199dad5b810a7f2e, type: 2}
+  - {fileID: 114843429884281904, guid: 58286c9c361fc5d4dad9cd485a510038, type: 2}

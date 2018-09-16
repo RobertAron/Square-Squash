@@ -113,28 +113,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &15646808
+--- !u!1 &644168162
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 15646810}
-  - component: {fileID: 15646809}
+  - component: {fileID: 644168164}
+  - component: {fileID: 644168163}
   m_Layer: 0
-  m_Name: Tile Slot 0 0
+  m_Name: Tile Slot 0 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &15646809
+--- !u!114 &644168163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 15646808}
+  m_GameObject: {fileID: 644168162}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
@@ -142,446 +142,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adjacentTiles:
     left: {fileID: 0}
-    right: {fileID: 1538320982}
-    above: {fileID: 1461615665}
-    bellow: {fileID: 0}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &15646810
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 15646808}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &44134000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 44134002}
-  - component: {fileID: 44134001}
-  m_Layer: 0
-  m_Name: Tile Slot 3 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &44134001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 44134000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 929268744}
-    right: {fileID: 1763941627}
-    above: {fileID: 727775548}
-    bellow: {fileID: 172562717}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &44134002
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 44134000}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &53968742
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 53968744}
-  - component: {fileID: 53968743}
-  m_Layer: 0
-  m_Name: Tile Slot 3 0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &53968743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53968742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 1884819097}
-    right: {fileID: 1459069910}
-    above: {fileID: 172562717}
-    bellow: {fileID: 0}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &53968744
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53968742}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &108600183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 108600185}
-  - component: {fileID: 108600184}
-  m_Layer: 0
-  m_Name: Tile Slot 1 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &108600184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 108600183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 581049584}
-    right: {fileID: 1562054901}
+    right: {fileID: 1314316012}
     above: {fileID: 0}
-    bellow: {fileID: 1315014686}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
---- !u!4 &108600185
+    bellow: {fileID: 1950657664}
+  _tileItem: {fileID: 0}
+--- !u!4 &644168164
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 108600183}
+  m_GameObject: {fileID: 644168162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1138397835}
-  m_RootOrder: 9
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &172562716
+--- !u!1 &775634400
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 172562718}
-  - component: {fileID: 172562717}
+  - component: {fileID: 775634402}
+  - component: {fileID: 775634401}
   m_Layer: 0
-  m_Name: Tile Slot 3 1
+  m_Name: Tile Slot 1 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &172562717
+--- !u!114 &775634401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 172562716}
+  m_GameObject: {fileID: 775634400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentTiles:
-    left: {fileID: 1012738333}
-    right: {fileID: 987097604}
-    above: {fileID: 44134001}
-    bellow: {fileID: 53968743}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &172562718
+    left: {fileID: 1950657664}
+    right: {fileID: 0}
+    above: {fileID: 1314316012}
+    bellow: {fileID: 0}
+  _tileItem: {fileID: 0}
+--- !u!4 &775634402
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 172562716}
+  m_GameObject: {fileID: 775634400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &220906110
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 220906112}
-  - component: {fileID: 220906111}
-  m_Layer: 0
-  m_Name: Tile Slot 0 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &220906111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 220906110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 0}
-    right: {fileID: 846900749}
-    above: {fileID: 1413020209}
-    bellow: {fileID: 1461615665}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &220906112
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 220906110}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1138397835}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &493898400
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4086053308492408, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 23028601082488812, guid: c0c88f4da9ce59040a381fa14840221e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dc8a17322553b3a4395f291565b827cb, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1 &581049583
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 581049585}
-  - component: {fileID: 581049584}
-  m_Layer: 0
-  m_Name: Tile Slot 0 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &581049584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 581049583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 0}
-    right: {fileID: 108600184}
-    above: {fileID: 0}
-    bellow: {fileID: 1413020209}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
---- !u!4 &581049585
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 581049583}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &614447769
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 614447770}
-  - component: {fileID: 614447771}
-  m_Layer: 0
-  m_Name: Tile Slot 4 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &614447770
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 614447769}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &614447771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 614447769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 925606135}
-    right: {fileID: 0}
-    above: {fileID: 0}
-    bellow: {fileID: 1047563175}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
---- !u!1 &727775547
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 727775549}
-  - component: {fileID: 727775548}
-  m_Layer: 0
-  m_Name: Tile Slot 3 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &727775548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 727775547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 2081861723}
-    right: {fileID: 1047563175}
-    above: {fileID: 925606135}
-    bellow: {fileID: 44134001}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &727775549
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 727775547}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &836992196
 GameObject:
@@ -660,288 +282,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &846900748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 846900750}
-  - component: {fileID: 846900749}
-  m_Layer: 0
-  m_Name: Tile Slot 1 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &846900749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 846900748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 220906111}
-    right: {fileID: 929268744}
-    above: {fileID: 1315014686}
-    bellow: {fileID: 1971377047}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &846900750
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 846900748}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &925606134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 925606136}
-  - component: {fileID: 925606135}
-  m_Layer: 0
-  m_Name: Tile Slot 3 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &925606135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 925606134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 1562054901}
-    right: {fileID: 614447771}
-    above: {fileID: 0}
-    bellow: {fileID: 727775548}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
---- !u!4 &925606136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 925606134}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &929268743
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 929268745}
-  - component: {fileID: 929268744}
-  m_Layer: 0
-  m_Name: Tile Slot 2 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &929268744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 929268743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 846900749}
-    right: {fileID: 44134001}
-    above: {fileID: 2081861723}
-    bellow: {fileID: 1012738333}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &929268745
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 929268743}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &987097603
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 987097605}
-  - component: {fileID: 987097604}
-  m_Layer: 0
-  m_Name: Tile Slot 4 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &987097604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 987097603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 172562717}
-    right: {fileID: 0}
-    above: {fileID: 1763941627}
-    bellow: {fileID: 1459069910}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &987097605
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 987097603}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1012738332
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1012738334}
-  - component: {fileID: 1012738333}
-  m_Layer: 0
-  m_Name: Tile Slot 2 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1012738333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1012738332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 1971377047}
-    right: {fileID: 172562717}
-    above: {fileID: 929268744}
-    bellow: {fileID: 1884819097}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1012738334
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1012738332}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1047563174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1047563176}
-  - component: {fileID: 1047563175}
-  m_Layer: 0
-  m_Name: Tile Slot 4 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1047563175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1047563174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 727775548}
-    right: {fileID: 0}
-    above: {fileID: 614447771}
-    bellow: {fileID: 1763941627}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1047563176
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1047563174}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1138397833
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1138397834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,8 +310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileAmount:
-    rows: 5
-    columns: 5
+    rows: 2
+    columns: 2
   tileSlotPrefab: {fileID: 1911456205686610, guid: 501c4e5c53b11f04e9734a0a722bbea0,
     type: 2}
 --- !u!4 &1138397835
@@ -984,419 +324,22 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 15646810}
-  - {fileID: 1461615666}
-  - {fileID: 220906112}
-  - {fileID: 1413020210}
-  - {fileID: 581049585}
-  - {fileID: 1538320983}
-  - {fileID: 1971377048}
-  - {fileID: 846900750}
-  - {fileID: 1315014687}
-  - {fileID: 108600185}
-  - {fileID: 1884819098}
-  - {fileID: 1012738334}
-  - {fileID: 929268745}
-  - {fileID: 2081861724}
-  - {fileID: 1562054902}
-  - {fileID: 53968744}
-  - {fileID: 172562718}
-  - {fileID: 44134002}
-  - {fileID: 727775549}
-  - {fileID: 925606136}
-  - {fileID: 1459069911}
-  - {fileID: 987097605}
-  - {fileID: 1763941628}
-  - {fileID: 1047563176}
-  - {fileID: 614447770}
+  - {fileID: 1950657665}
+  - {fileID: 644168164}
+  - {fileID: 775634402}
+  - {fileID: 1314316011}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1315014685
+--- !u!1 &1314316010
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1315014687}
-  - component: {fileID: 1315014686}
-  m_Layer: 0
-  m_Name: Tile Slot 1 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1315014686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1315014685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 1413020209}
-    right: {fileID: 2081861723}
-    above: {fileID: 108600184}
-    bellow: {fileID: 846900749}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1315014687
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1315014685}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1413020208
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1413020210}
-  - component: {fileID: 1413020209}
-  m_Layer: 0
-  m_Name: Tile Slot 0 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1413020209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1413020208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 0}
-    right: {fileID: 1315014686}
-    above: {fileID: 581049584}
-    bellow: {fileID: 220906111}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1413020210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1413020208}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1459069909
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1459069911}
-  - component: {fileID: 1459069910}
-  m_Layer: 0
-  m_Name: Tile Slot 4 0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1459069910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1459069909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 53968743}
-    right: {fileID: 0}
-    above: {fileID: 987097604}
-    bellow: {fileID: 0}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1459069911
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1459069909}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1461615664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1461615666}
-  - component: {fileID: 1461615665}
-  m_Layer: 0
-  m_Name: Tile Slot 0 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1461615665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461615664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 0}
-    right: {fileID: 1971377047}
-    above: {fileID: 220906111}
-    bellow: {fileID: 15646809}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1461615666
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1461615664}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1538320981
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1538320983}
-  - component: {fileID: 1538320982}
-  m_Layer: 0
-  m_Name: Tile Slot 1 0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1538320982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1538320981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 15646809}
-    right: {fileID: 1884819097}
-    above: {fileID: 1971377047}
-    bellow: {fileID: 0}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1538320983
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1538320981}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1562054900
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1562054902}
-  - component: {fileID: 1562054901}
-  m_Layer: 0
-  m_Name: Tile Slot 2 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1562054901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1562054900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 108600184}
-    right: {fileID: 925606135}
-    above: {fileID: 0}
-    bellow: {fileID: 2081861723}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
---- !u!4 &1562054902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1562054900}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1763941626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1763941628}
-  - component: {fileID: 1763941627}
-  m_Layer: 0
-  m_Name: Tile Slot 4 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1763941627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763941626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 44134001}
-    right: {fileID: 0}
-    above: {fileID: 1047563175}
-    bellow: {fileID: 987097604}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1763941628
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763941626}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1884819096
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1884819098}
-  - component: {fileID: 1884819097}
-  m_Layer: 0
-  m_Name: Tile Slot 2 0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1884819097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1884819096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adjacentTiles:
-    left: {fileID: 1538320982}
-    right: {fileID: 53968743}
-    above: {fileID: 1012738333}
-    bellow: {fileID: 0}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1884819098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1884819096}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1971377046
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1971377048}
-  - component: {fileID: 1971377047}
+  - component: {fileID: 1314316011}
+  - component: {fileID: 1314316012}
   m_Layer: 0
   m_Name: Tile Slot 1 1
   m_TagString: Untagged
@@ -1404,81 +347,79 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1971377047
+--- !u!4 &1314316011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1314316010}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1138397835}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1314316012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1971377046}
+  m_GameObject: {fileID: 1314316010}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentTiles:
-    left: {fileID: 1461615665}
-    right: {fileID: 1012738333}
-    above: {fileID: 846900749}
-    bellow: {fileID: 1538320982}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &1971377048
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1971377046}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1138397835}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2081861722
+    left: {fileID: 644168163}
+    right: {fileID: 0}
+    above: {fileID: 0}
+    bellow: {fileID: 775634401}
+  _tileItem: {fileID: 0}
+--- !u!1 &1950657663
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2081861724}
-  - component: {fileID: 2081861723}
+  - component: {fileID: 1950657665}
+  - component: {fileID: 1950657664}
   m_Layer: 0
-  m_Name: Tile Slot 2 3
+  m_Name: Tile Slot 0 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2081861723
+--- !u!114 &1950657664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2081861722}
+  m_GameObject: {fileID: 1950657663}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d890466eff603554fbe92f0ce5e5cc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   adjacentTiles:
-    left: {fileID: 1315014686}
-    right: {fileID: 727775548}
-    above: {fileID: 1562054901}
-    bellow: {fileID: 929268744}
-  _tileItem: {fileID: 114150160853168930, guid: e94d24025f5aab3479e87e653ab36e02,
-    type: 2}
---- !u!4 &2081861724
+    left: {fileID: 0}
+    right: {fileID: 775634401}
+    above: {fileID: 644168163}
+    bellow: {fileID: 0}
+  _tileItem: {fileID: 0}
+--- !u!4 &1950657665
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2081861722}
+  m_GameObject: {fileID: 1950657663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1138397835}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
