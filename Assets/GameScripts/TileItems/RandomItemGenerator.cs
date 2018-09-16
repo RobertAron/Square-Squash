@@ -5,7 +5,7 @@ using UnityEngine;
 public class RandomItemGenerator : TileItem
 {
   public TileItem[] possibleItems;
-  public int dotsSpawned = 0;
+  private int dotsSpawned = 0;
 
   public override bool canLink(TileItem originalItem)
   {
