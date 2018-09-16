@@ -12,6 +12,6 @@ public abstract class TileItem : MonoBehaviour
 
   private void FixedUpdate()
   {
-    transform.position = Vector3.Lerp(transform.position, tileSlot.transform.position, Time.fixedDeltaTime);
+    transform.position = Vector3.MoveTowards(transform.position, tileSlot.transform.position, Time.fixedDeltaTime);
   }
 }

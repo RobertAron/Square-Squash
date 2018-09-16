@@ -5,6 +5,7 @@ using UnityEngine;
 public class RandomItemGenerator : TileItem
 {
   public TileItem[] possibleItems;
+  public int dotsSpawned = 0;
 
   public override bool canLink(TileItem originalItem)
   {
@@ -19,13 +20,19 @@ public class RandomItemGenerator : TileItem
 
   public override TileItem GetItem()
   {
+    Vector3 dotSpawnLocation = transform.position;
+    dotSpawnLocation.y += (dotsSpawned * transform.localScale.x);
+    dotsSpawned++;
     TileItem itemType = possibleItems[Random.Range(0, possibleItems.Length)];
-    GameObject newItem = Instantiate(itemType.gameObject,transform.position,transform.rotation);
+    GameObject newItem = Instantiate(itemType.gameObject,dotSpawnLocation,transform.rotation);
     return newItem.GetComponent<TileItem>();
   }
 
   public override void OnClearItem()
   {
     // Do nothing
+  }
+  private void FixedUpdate() {
+    dotsSpawned = 0;
   }
 }
