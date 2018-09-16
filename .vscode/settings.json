@@ -6,6 +6,7 @@
         "**/.gitmodules":true,
         "**/*.booproj":true,
         "**/*.pidb":true,
+        aosdifjasdf,
         "**/*.suo":true,
         "**/*.user":true,
         "**/*.userprefs":true,
