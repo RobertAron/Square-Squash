@@ -22,7 +22,7 @@ public class TileSlotGenerator : MonoBehaviour
   public void InstatiateTilesSlots()
   {
     TileSlot[,] tiles = CreateTileArray();
-		LinkTileSlots(tiles);
+    LinkTileSlots(tiles);
   }
 
   private TileSlot[,] CreateTileArray()
@@ -33,28 +33,29 @@ public class TileSlotGenerator : MonoBehaviour
       for (int y = 0; y < tileAmount.rows; y++)
       {
         GameObject tileSlotGameObject = Instantiate(tileSlotPrefab, new Vector3(x, y, 0), Quaternion.identity, transform);
-				tileSlotGameObject.name = "Tile Slot " + x + " " + y;
-				tiles[x, y] = tileSlotGameObject.GetComponent<TileSlot>();
+        tileSlotGameObject.name = "Tile Slot " + x + " " + y;
+        tiles[x, y] = tileSlotGameObject.GetComponent<TileSlot>();
       }
     }
     return tiles;
   }
-	private void LinkTileSlots(TileSlot[,] tileSlots){
-		for (int x = 0; x < tileAmount.columns; x++)
+  private void LinkTileSlots(TileSlot[,] tileSlots)
+  {
+    for (int x = 0; x < tileAmount.columns; x++)
     {
       for (int y = 0; y < tileAmount.rows; y++)
       {
-				if(x>0)
-					tileSlots[x,y].adjacentTiles.left = tileSlots[x-1,y];
-				if(y>0)
-					tileSlots[x,y].adjacentTiles.bellow = tileSlots[x,y-1];
-				if(x<tileAmount.columns-1)
-					tileSlots[x,y].adjacentTiles.right = tileSlots[x+1,y];
-				if(y<tileAmount.rows-1)
-					tileSlots[x,y].adjacentTiles.above = tileSlots[x,y+1];
-			}
-		}
-	}
+        if (x > 0)
+          tileSlots[x, y].adjacentTiles.left = tileSlots[x - 1, y];
+        if (y > 0)
+          tileSlots[x, y].adjacentTiles.bellow = tileSlots[x, y - 1];
+        if (x < tileAmount.columns - 1)
+          tileSlots[x, y].adjacentTiles.right = tileSlots[x + 1, y];
+        if (y < tileAmount.rows - 1)
+          tileSlots[x, y].adjacentTiles.above = tileSlots[x, y + 1];
+      }
+    }
+  }
 }
 
 

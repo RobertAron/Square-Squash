@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicDot : TileItem {
-	public Color dotColor;
+public class BasicDot : TileItem
+{
+  public Color dotColor;
 
   public override bool canLink(TileItem originalItem)
   {
@@ -12,18 +13,20 @@ public class BasicDot : TileItem {
 
   public override TileItem GetItem()
   {
-    throw new System.NotImplementedException();
+    tileSlot.RemoveTileItem();
+    return this;
   }
 
-  public override void OnDestroy()
+	[ContextMenu("Force clear dot")]
+  public override void OnClearItem()
   {
-    throw new System.NotImplementedException();
+    tileSlot.RemoveTileItem();
+		Destroy(this.gameObject);
   }
 
-  public override void OnDrawGizmos()
+  public override void DrawItemGizmo(Vector3 position)
   {
-		Debug.Log(dotColor);
-		Gizmos.color = dotColor;
-    Gizmos.DrawWireSphere(transform.position,transform.localScale.x/2);
+    Gizmos.color = dotColor;
+    Gizmos.DrawWireSphere(position, transform.localScale.x / 2);
   }
 }

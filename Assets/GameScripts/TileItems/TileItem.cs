@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class TileItem : MonoBehaviour {
-	public abstract TileItem GetItem();
-	public abstract void OnDestroy();
-	public abstract bool canLink(TileItem originalItem);
-	public abstract void OnDrawGizmos();
+public abstract class TileItem : MonoBehaviour
+{
+  public TileSlot tileSlot;
+  public abstract TileItem GetItem();
+  public abstract void OnClearItem();
+  public abstract bool canLink(TileItem originalItem);
+  public abstract void DrawItemGizmo(Vector3 position);
+
+  private void FixedUpdate()
+  {
+    transform.position = Vector3.Lerp(transform.position, tileSlot.transform.position, Time.fixedDeltaTime);
+  }
 }

@@ -56,3 +56,4 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 0}
     bellow: {fileID: 0}
+  _tileItem: {fileID: 0}
