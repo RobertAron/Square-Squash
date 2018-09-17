@@ -9,6 +9,7 @@ public class TileSlot : MonoBehaviour {
 	public AdjacentTiles adjacentTiles;
 	// Public for editor reasons, but should not be manually changed.
 	public TileItem _tileItem;
+	public Vector2Int tilePosition;
 	private void OnDrawGizmos() {
 		Gizmos.DrawWireCube(transform.position,transform.localScale);
 		if(_tileItem!=null)

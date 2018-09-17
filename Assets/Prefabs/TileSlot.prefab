@@ -57,3 +57,4 @@ MonoBehaviour:
     above: {fileID: 0}
     bellow: {fileID: 0}
   _tileItem: {fileID: 0}
+  tilePosition: {x: 0, y: 0}

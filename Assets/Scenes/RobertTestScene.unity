@@ -147,6 +147,7 @@ MonoBehaviour:
     bellow: {fileID: 753661291}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &7428610
 Transform:
   m_ObjectHideFlags: 0
@@ -194,6 +195,7 @@ MonoBehaviour:
     bellow: {fileID: 1506531341}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &19922447
 Transform:
   m_ObjectHideFlags: 0
@@ -241,6 +243,7 @@ MonoBehaviour:
     bellow: {fileID: 1515115352}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &167945222
 Transform:
   m_ObjectHideFlags: 0
@@ -288,6 +291,7 @@ MonoBehaviour:
     bellow: {fileID: 589676630}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &235882755
 Transform:
   m_ObjectHideFlags: 0
@@ -335,6 +339,7 @@ MonoBehaviour:
     bellow: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &300450660
 Transform:
   m_ObjectHideFlags: 0
@@ -382,6 +387,7 @@ MonoBehaviour:
     bellow: {fileID: 881699329}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &304174052
 Transform:
   m_ObjectHideFlags: 0
@@ -429,6 +435,7 @@ MonoBehaviour:
     bellow: {fileID: 1928943590}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &466921997
 Transform:
   m_ObjectHideFlags: 0
@@ -441,6 +448,105 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1138397835}
   m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &507252987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507252990}
+  - component: {fileID: 507252989}
+  - component: {fileID: 507252988}
+  m_Layer: 0
+  m_Name: FingerPath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &507252988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507252987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02eacf05212a2fc4d82f3192deec352d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInitialPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 507252989}
+        m_MethodName: initialPress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: InputPositionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onRelease:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 507252989}
+        m_MethodName: OnRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: InputEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  onHeld:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 507252989}
+        m_MethodName: OnHeld
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: InputPositionEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &507252989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507252987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c7fb14e7409574aae4c0949b5b2a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &507252990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507252987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &571959218
 GameObject:
@@ -476,6 +582,7 @@ MonoBehaviour:
     bellow: {fileID: 622575782}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &571959220
 Transform:
   m_ObjectHideFlags: 0
@@ -523,6 +630,7 @@ MonoBehaviour:
     bellow: {fileID: 167945221}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &589676631
 Transform:
   m_ObjectHideFlags: 0
@@ -570,6 +678,7 @@ MonoBehaviour:
     bellow: {fileID: 1666014887}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &622575783
 Transform:
   m_ObjectHideFlags: 0
@@ -617,6 +726,7 @@ MonoBehaviour:
     bellow: {fileID: 1754966657}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &699774921
 Transform:
   m_ObjectHideFlags: 0
@@ -664,6 +774,7 @@ MonoBehaviour:
     bellow: {fileID: 1238081679}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &700667854
 Transform:
   m_ObjectHideFlags: 0
@@ -711,6 +822,7 @@ MonoBehaviour:
     bellow: {fileID: 1165945703}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &702560291
 Transform:
   m_ObjectHideFlags: 0
@@ -758,6 +870,7 @@ MonoBehaviour:
     bellow: {fileID: 868280583}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &753661292
 Transform:
   m_ObjectHideFlags: 0
@@ -805,6 +918,7 @@ MonoBehaviour:
     bellow: {fileID: 1434974006}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &786566090
 Transform:
   m_ObjectHideFlags: 0
@@ -852,6 +966,7 @@ MonoBehaviour:
     bellow: {fileID: 1490500414}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &813840474
 Transform:
   m_ObjectHideFlags: 0
@@ -899,6 +1014,7 @@ MonoBehaviour:
     bellow: {fileID: 939350219}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &814594197
 Transform:
   m_ObjectHideFlags: 0
@@ -983,7 +1099,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 836992196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 5, z: 0}
+  m_LocalPosition: {x: 6, y: 5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1023,6 +1139,7 @@ MonoBehaviour:
     bellow: {fileID: 1440899456}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &868280584
 Transform:
   m_ObjectHideFlags: 0
@@ -1070,6 +1187,7 @@ MonoBehaviour:
     bellow: {fileID: 1791264981}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &877469016
 Transform:
   m_ObjectHideFlags: 0
@@ -1117,6 +1235,7 @@ MonoBehaviour:
     bellow: {fileID: 1696875534}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &881699330
 Transform:
   m_ObjectHideFlags: 0
@@ -1164,6 +1283,7 @@ MonoBehaviour:
     bellow: {fileID: 1770409206}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &920488863
 Transform:
   m_ObjectHideFlags: 0
@@ -1211,6 +1331,7 @@ MonoBehaviour:
     bellow: {fileID: 786566089}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &936498003
 Transform:
   m_ObjectHideFlags: 0
@@ -1258,6 +1379,7 @@ MonoBehaviour:
     bellow: {fileID: 2117184899}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &939350220
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,6 +1427,7 @@ MonoBehaviour:
     bellow: {fileID: 7428609}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1024335084
 Transform:
   m_ObjectHideFlags: 0
@@ -1352,6 +1475,7 @@ MonoBehaviour:
     bellow: {fileID: 700667853}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1091518678
 Transform:
   m_ObjectHideFlags: 0
@@ -1494,6 +1618,7 @@ MonoBehaviour:
     bellow: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1153403725
 Transform:
   m_ObjectHideFlags: 0
@@ -1541,6 +1666,7 @@ MonoBehaviour:
     bellow: {fileID: 1091518677}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1165945704
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,6 +1714,7 @@ MonoBehaviour:
     bellow: {fileID: 1153403724}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1238081680
 Transform:
   m_ObjectHideFlags: 0
@@ -1635,6 +1762,7 @@ MonoBehaviour:
     bellow: {fileID: 1635058097}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1254469951
 Transform:
   m_ObjectHideFlags: 0
@@ -1682,6 +1810,7 @@ MonoBehaviour:
     bellow: {fileID: 877469015}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1321070836
 Transform:
   m_ObjectHideFlags: 0
@@ -1729,6 +1858,7 @@ MonoBehaviour:
     bellow: {fileID: 1555446380}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1434974007
 Transform:
   m_ObjectHideFlags: 0
@@ -1776,6 +1906,7 @@ MonoBehaviour:
     bellow: {fileID: 813840473}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1440899457
 Transform:
   m_ObjectHideFlags: 0
@@ -1823,6 +1954,7 @@ MonoBehaviour:
     bellow: {fileID: 702560290}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1466209928
 Transform:
   m_ObjectHideFlags: 0
@@ -1870,6 +2002,7 @@ MonoBehaviour:
     bellow: {fileID: 300450659}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1490500415
 Transform:
   m_ObjectHideFlags: 0
@@ -1917,6 +2050,7 @@ MonoBehaviour:
     bellow: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1506531342
 Transform:
   m_ObjectHideFlags: 0
@@ -1964,6 +2098,7 @@ MonoBehaviour:
     bellow: {fileID: 920488862}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1515115353
 Transform:
   m_ObjectHideFlags: 0
@@ -2011,6 +2146,7 @@ MonoBehaviour:
     bellow: {fileID: 936498002}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1524224676
 Transform:
   m_ObjectHideFlags: 0
@@ -2058,6 +2194,7 @@ MonoBehaviour:
     bellow: {fileID: 571959219}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1555446381
 Transform:
   m_ObjectHideFlags: 0
@@ -2105,6 +2242,7 @@ MonoBehaviour:
     bellow: {fileID: 1321070835}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1635058098
 Transform:
   m_ObjectHideFlags: 0
@@ -2152,6 +2290,7 @@ MonoBehaviour:
     bellow: {fileID: 19922446}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1666014888
 Transform:
   m_ObjectHideFlags: 0
@@ -2199,6 +2338,7 @@ MonoBehaviour:
     bellow: {fileID: 699774920}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1696875535
 Transform:
   m_ObjectHideFlags: 0
@@ -2246,6 +2386,7 @@ MonoBehaviour:
     bellow: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1754966658
 Transform:
   m_ObjectHideFlags: 0
@@ -2293,6 +2434,7 @@ MonoBehaviour:
     bellow: {fileID: 466921996}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1770409207
 Transform:
   m_ObjectHideFlags: 0
@@ -2340,6 +2482,7 @@ MonoBehaviour:
     bellow: {fileID: 304174051}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1791264982
 Transform:
   m_ObjectHideFlags: 0
@@ -2387,6 +2530,7 @@ MonoBehaviour:
     bellow: {fileID: 1024335083}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1801385670
 Transform:
   m_ObjectHideFlags: 0
@@ -2434,6 +2578,7 @@ MonoBehaviour:
     bellow: {fileID: 2012335951}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &1928943591
 Transform:
   m_ObjectHideFlags: 0
@@ -2481,6 +2626,7 @@ MonoBehaviour:
     bellow: {fileID: 2093070919}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &2012335952
 Transform:
   m_ObjectHideFlags: 0
@@ -2541,6 +2687,7 @@ MonoBehaviour:
     bellow: {fileID: 1801385669}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!1 &2093070918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2722,7 @@ MonoBehaviour:
     bellow: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &2093070920
 Transform:
   m_ObjectHideFlags: 0
@@ -2622,6 +2770,7 @@ MonoBehaviour:
     bellow: {fileID: 1466209927}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
+  tilePosition: {x: 0, y: 0}
 --- !u!4 &2117184900
 Transform:
   m_ObjectHideFlags: 0

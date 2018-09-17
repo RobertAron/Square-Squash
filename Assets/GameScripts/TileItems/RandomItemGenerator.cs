@@ -7,9 +7,14 @@ public class RandomItemGenerator : TileItem
   public TileItem[] possibleItems;
   private int dotsSpawned = 0;
 
-  public override bool canLink(TileItem originalItem)
+  public override bool CanLinkPath(DotPalette originalColor,Vector2Int previousPosition)
   {
-    throw new System.NotImplementedException();
+    return false;
+  }
+
+  public override bool CanStartPath()
+  {
+    return false;
   }
 
   public override void DrawItemGizmo(Vector3 position)

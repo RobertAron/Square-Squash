@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4942205459828556}
   - component: {fileID: 114516643961163470}
+  - component: {fileID: 135346934692185258}
   m_Layer: 0
   m_Name: DotBasicPink
   m_TagString: Untagged
@@ -126,3 +127,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSlot: {fileID: 0}
   dotColor: 0
+--- !u!135 &135346934692185258
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858491057464172}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

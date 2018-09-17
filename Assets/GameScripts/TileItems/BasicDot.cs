@@ -13,11 +13,6 @@ public class BasicDot : TileItem
     child.GetComponent<Renderer>().material.color =  ColorSchema.GetColor(dotColor);
   }
 
-  public override bool canLink(TileItem originalItem)
-  {
-    throw new System.NotImplementedException();
-  }
-
   public override TileItem GetItem()
   {
     tileSlot.RemoveTileItem();
@@ -35,5 +30,17 @@ public class BasicDot : TileItem
   {
     Gizmos.color = ColorSchema.GetColor(dotColor);
     Gizmos.DrawWireSphere(position, transform.localScale.x / 2);
+  }
+
+  public override bool CanLinkPath(DotPalette originalColor,Vector2Int previousPosition)
+  {
+    if(originalColor!=dotColor) return false;
+    if((previousPosition-tileSlot.tilePosition).magnitude>1) return false;
+    return true;
+  }
+
+  public override bool CanStartPath()
+  {
+    return true;
   }
 }

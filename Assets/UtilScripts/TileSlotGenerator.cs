@@ -35,6 +35,7 @@ public class TileSlotGenerator : MonoBehaviour
         GameObject tileSlotGameObject = Instantiate(tileSlotPrefab, new Vector3(x, y, 0), Quaternion.identity, transform);
         tileSlotGameObject.name = "Tile Slot " + x + " " + y;
         tiles[x, y] = tileSlotGameObject.GetComponent<TileSlot>();
+        tiles[x, y].tilePosition = new Vector2Int(x,y);
       }
     }
     return tiles;
