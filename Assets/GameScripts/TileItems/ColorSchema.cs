@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum DotPalette{Pink,Orange,Red,Blue,Green,Purple}
+public enum DotPalette{Pink,Orange,Red,Blue,Green,Purple,None,All}
 
 public static class ColorSchema {
 

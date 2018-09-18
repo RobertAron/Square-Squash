@@ -6,23 +6,21 @@ using UnityEngine;
 
 public class BasicDot : TileItem
 {
-  public DotPalette dotColor;
 
   private void Awake() {
     GameObject child = transform.GetChild(0).gameObject;
     child.GetComponent<Renderer>().material.color =  ColorSchema.GetColor(dotColor);
   }
 
-  public override TileItem GetItem()
+  public override TileItem GetItemFromItem()
   {
-    tileSlot.RemoveTileItem();
+    tileSlot.ObtainNewTileItem();
     return this;
   }
 
-	[ContextMenu("Force clear dot")]
   public override void OnClearItem()
   {
-    tileSlot.RemoveTileItem();
+    tileSlot.ObtainNewTileItem();
 		Destroy(this.gameObject);
   }
 
@@ -32,15 +30,8 @@ public class BasicDot : TileItem
     Gizmos.DrawWireSphere(position, transform.localScale.x / 2);
   }
 
-  public override bool CanLinkPath(DotPalette originalColor,Vector2Int previousPosition)
+  public override DotPalette GetPathColor()
   {
-    if(originalColor!=dotColor) return false;
-    if((previousPosition-tileSlot.tilePosition).magnitude>1) return false;
-    return true;
-  }
-
-  public override bool CanStartPath()
-  {
-    return true;
+    return dotColor;
   }
 }

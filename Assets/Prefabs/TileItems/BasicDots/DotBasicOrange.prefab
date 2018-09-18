@@ -37,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4481080287828486}
   - component: {fileID: 114102784754513410}
-  - component: {fileID: 135666632839050162}
   m_Layer: 0
   m_Name: DotBasicOrange
   m_TagString: Untagged
@@ -127,15 +126,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSlot: {fileID: 0}
   dotColor: 1
---- !u!135 &135666632839050162
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1605173469081740}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

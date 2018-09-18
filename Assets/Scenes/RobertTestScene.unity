@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -144,10 +144,9 @@ MonoBehaviour:
     left: {fileID: 877469015}
     right: {fileID: 0}
     above: {fileID: 1024335083}
-    bellow: {fileID: 753661291}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &7428610
 Transform:
   m_ObjectHideFlags: 0
@@ -192,10 +191,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 1238081679}
     above: {fileID: 1666014887}
-    bellow: {fileID: 1506531341}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &19922447
 Transform:
   m_ObjectHideFlags: 0
@@ -240,10 +238,9 @@ MonoBehaviour:
     left: {fileID: 2117184899}
     right: {fileID: 1321070835}
     above: {fileID: 589676630}
-    bellow: {fileID: 1515115352}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &167945222
 Transform:
   m_ObjectHideFlags: 0
@@ -288,10 +285,9 @@ MonoBehaviour:
     left: {fileID: 814594196}
     right: {fileID: 1254469950}
     above: {fileID: 0}
-    bellow: {fileID: 589676630}
+    below: {fileID: 0}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &235882755
 Transform:
   m_ObjectHideFlags: 0
@@ -336,10 +332,9 @@ MonoBehaviour:
     left: {fileID: 1754966657}
     right: {fileID: 0}
     above: {fileID: 1490500414}
-    bellow: {fileID: 0}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &300450660
 Transform:
   m_ObjectHideFlags: 0
@@ -384,10 +379,9 @@ MonoBehaviour:
     left: {fileID: 1770409206}
     right: {fileID: 868280583}
     above: {fileID: 1791264981}
-    bellow: {fileID: 881699329}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &304174052
 Transform:
   m_ObjectHideFlags: 0
@@ -432,10 +426,9 @@ MonoBehaviour:
     left: {fileID: 1091518677}
     right: {fileID: 881699329}
     above: {fileID: 1770409206}
-    bellow: {fileID: 1928943590}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &466921997
 Transform:
   m_ObjectHideFlags: 0
@@ -459,6 +452,7 @@ GameObject:
   - component: {fileID: 507252990}
   - component: {fileID: 507252989}
   - component: {fileID: 507252988}
+  - component: {fileID: 507252991}
   m_Layer: 0
   m_Name: FingerPath
   m_TagString: Untagged
@@ -535,6 +529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4c7fb14e7409574aae4c0949b5b2a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  path: []
+  initialDot: {fileID: 0}
 --- !u!4 &507252990
 Transform:
   m_ObjectHideFlags: 0
@@ -548,6 +544,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507252991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507252987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e3ec8d0844a5b4d9c045e14e6afedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &571959218
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,10 +586,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 1165945703}
     above: {fileID: 1555446380}
-    bellow: {fileID: 622575782}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &571959220
 Transform:
   m_ObjectHideFlags: 0
@@ -627,10 +633,9 @@ MonoBehaviour:
     left: {fileID: 939350219}
     right: {fileID: 1635058097}
     above: {fileID: 235882754}
-    bellow: {fileID: 167945221}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &589676631
 Transform:
   m_ObjectHideFlags: 0
@@ -675,10 +680,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 1091518677}
     above: {fileID: 571959219}
-    bellow: {fileID: 1666014887}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &622575783
 Transform:
   m_ObjectHideFlags: 0
@@ -723,10 +727,9 @@ MonoBehaviour:
     left: {fileID: 2012335951}
     right: {fileID: 1490500414}
     above: {fileID: 1696875534}
-    bellow: {fileID: 1754966657}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &699774921
 Transform:
   m_ObjectHideFlags: 0
@@ -771,10 +774,9 @@ MonoBehaviour:
     left: {fileID: 1666014887}
     right: {fileID: 1928943590}
     above: {fileID: 1091518677}
-    bellow: {fileID: 1238081679}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &700667854
 Transform:
   m_ObjectHideFlags: 0
@@ -819,10 +821,9 @@ MonoBehaviour:
     left: {fileID: 1555446380}
     right: {fileID: 920488862}
     above: {fileID: 1466209927}
-    bellow: {fileID: 1165945703}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &702560291
 Transform:
   m_ObjectHideFlags: 0
@@ -867,10 +868,9 @@ MonoBehaviour:
     left: {fileID: 1791264981}
     right: {fileID: 0}
     above: {fileID: 7428609}
-    bellow: {fileID: 868280583}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &753661292
 Transform:
   m_ObjectHideFlags: 0
@@ -915,10 +915,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 2117184899}
     above: {fileID: 936498002}
-    bellow: {fileID: 1434974006}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &786566090
 Transform:
   m_ObjectHideFlags: 0
@@ -963,10 +962,9 @@ MonoBehaviour:
     left: {fileID: 1696875534}
     right: {fileID: 0}
     above: {fileID: 1440899456}
-    bellow: {fileID: 1490500414}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &813840474
 Transform:
   m_ObjectHideFlags: 0
@@ -1011,10 +1009,9 @@ MonoBehaviour:
     left: {fileID: 1524224675}
     right: {fileID: 235882754}
     above: {fileID: 0}
-    bellow: {fileID: 939350219}
+    below: {fileID: 0}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &814594197
 Transform:
   m_ObjectHideFlags: 0
@@ -1061,7 +1058,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1136,10 +1133,9 @@ MonoBehaviour:
     left: {fileID: 304174051}
     right: {fileID: 0}
     above: {fileID: 753661291}
-    bellow: {fileID: 1440899456}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &868280584
 Transform:
   m_ObjectHideFlags: 0
@@ -1184,10 +1180,9 @@ MonoBehaviour:
     left: {fileID: 1515115352}
     right: {fileID: 7428609}
     above: {fileID: 1321070835}
-    bellow: {fileID: 1791264981}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &877469016
 Transform:
   m_ObjectHideFlags: 0
@@ -1232,10 +1227,9 @@ MonoBehaviour:
     left: {fileID: 466921996}
     right: {fileID: 1440899456}
     above: {fileID: 304174051}
-    bellow: {fileID: 1696875534}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &881699330
 Transform:
   m_ObjectHideFlags: 0
@@ -1280,10 +1274,9 @@ MonoBehaviour:
     left: {fileID: 702560290}
     right: {fileID: 1791264981}
     above: {fileID: 1515115352}
-    bellow: {fileID: 1770409206}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &920488863
 Transform:
   m_ObjectHideFlags: 0
@@ -1328,10 +1321,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 939350219}
     above: {fileID: 1524224675}
-    bellow: {fileID: 786566089}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &936498003
 Transform:
   m_ObjectHideFlags: 0
@@ -1376,10 +1368,9 @@ MonoBehaviour:
     left: {fileID: 936498002}
     right: {fileID: 589676630}
     above: {fileID: 814594196}
-    bellow: {fileID: 2117184899}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &939350220
 Transform:
   m_ObjectHideFlags: 0
@@ -1424,10 +1415,9 @@ MonoBehaviour:
     left: {fileID: 1321070835}
     right: {fileID: 0}
     above: {fileID: 1801385669}
-    bellow: {fileID: 7428609}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1024335084
 Transform:
   m_ObjectHideFlags: 0
@@ -1472,10 +1462,9 @@ MonoBehaviour:
     left: {fileID: 622575782}
     right: {fileID: 466921996}
     above: {fileID: 1165945703}
-    bellow: {fileID: 700667853}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1091518678
 Transform:
   m_ObjectHideFlags: 0
@@ -1615,10 +1604,9 @@ MonoBehaviour:
     left: {fileID: 1506531341}
     right: {fileID: 2093070919}
     above: {fileID: 1238081679}
-    bellow: {fileID: 0}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1153403725
 Transform:
   m_ObjectHideFlags: 0
@@ -1663,10 +1651,9 @@ MonoBehaviour:
     left: {fileID: 571959219}
     right: {fileID: 1770409206}
     above: {fileID: 702560290}
-    bellow: {fileID: 1091518677}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1165945704
 Transform:
   m_ObjectHideFlags: 0
@@ -1711,10 +1698,9 @@ MonoBehaviour:
     left: {fileID: 19922446}
     right: {fileID: 2012335951}
     above: {fileID: 700667853}
-    bellow: {fileID: 1153403724}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1238081680
 Transform:
   m_ObjectHideFlags: 0
@@ -1759,10 +1745,9 @@ MonoBehaviour:
     left: {fileID: 235882754}
     right: {fileID: 2089243386}
     above: {fileID: 0}
-    bellow: {fileID: 1635058097}
+    below: {fileID: 0}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1254469951
 Transform:
   m_ObjectHideFlags: 0
@@ -1807,10 +1792,9 @@ MonoBehaviour:
     left: {fileID: 167945221}
     right: {fileID: 1024335083}
     above: {fileID: 1635058097}
-    bellow: {fileID: 877469015}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1321070836
 Transform:
   m_ObjectHideFlags: 0
@@ -1855,10 +1839,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 1466209927}
     above: {fileID: 786566089}
-    bellow: {fileID: 1555446380}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1434974007
 Transform:
   m_ObjectHideFlags: 0
@@ -1903,10 +1886,9 @@ MonoBehaviour:
     left: {fileID: 881699329}
     right: {fileID: 0}
     above: {fileID: 868280583}
-    bellow: {fileID: 813840473}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1440899457
 Transform:
   m_ObjectHideFlags: 0
@@ -1951,10 +1933,9 @@ MonoBehaviour:
     left: {fileID: 1434974006}
     right: {fileID: 1515115352}
     above: {fileID: 2117184899}
-    bellow: {fileID: 702560290}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1466209928
 Transform:
   m_ObjectHideFlags: 0
@@ -1999,10 +1980,9 @@ MonoBehaviour:
     left: {fileID: 699774920}
     right: {fileID: 0}
     above: {fileID: 813840473}
-    bellow: {fileID: 300450659}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1490500415
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,10 +2027,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 1153403724}
     above: {fileID: 19922446}
-    bellow: {fileID: 0}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1506531342
 Transform:
   m_ObjectHideFlags: 0
@@ -2095,10 +2074,9 @@ MonoBehaviour:
     left: {fileID: 1466209927}
     right: {fileID: 877469015}
     above: {fileID: 167945221}
-    bellow: {fileID: 920488862}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1515115353
 Transform:
   m_ObjectHideFlags: 0
@@ -2143,10 +2121,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 814594196}
     above: {fileID: 0}
-    bellow: {fileID: 936498002}
+    below: {fileID: 0}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1524224676
 Transform:
   m_ObjectHideFlags: 0
@@ -2191,10 +2168,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 702560290}
     above: {fileID: 1434974006}
-    bellow: {fileID: 571959219}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1555446381
 Transform:
   m_ObjectHideFlags: 0
@@ -2239,10 +2215,9 @@ MonoBehaviour:
     left: {fileID: 589676630}
     right: {fileID: 1801385669}
     above: {fileID: 1254469950}
-    bellow: {fileID: 1321070835}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1635058098
 Transform:
   m_ObjectHideFlags: 0
@@ -2287,10 +2262,9 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 700667853}
     above: {fileID: 622575782}
-    bellow: {fileID: 19922446}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1666014888
 Transform:
   m_ObjectHideFlags: 0
@@ -2335,10 +2309,9 @@ MonoBehaviour:
     left: {fileID: 1928943590}
     right: {fileID: 813840473}
     above: {fileID: 881699329}
-    bellow: {fileID: 699774920}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1696875535
 Transform:
   m_ObjectHideFlags: 0
@@ -2383,10 +2356,9 @@ MonoBehaviour:
     left: {fileID: 2093070919}
     right: {fileID: 300450659}
     above: {fileID: 699774920}
-    bellow: {fileID: 0}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1754966658
 Transform:
   m_ObjectHideFlags: 0
@@ -2431,10 +2403,9 @@ MonoBehaviour:
     left: {fileID: 1165945703}
     right: {fileID: 304174051}
     above: {fileID: 920488862}
-    bellow: {fileID: 466921996}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1770409207
 Transform:
   m_ObjectHideFlags: 0
@@ -2479,10 +2450,9 @@ MonoBehaviour:
     left: {fileID: 920488862}
     right: {fileID: 753661291}
     above: {fileID: 877469015}
-    bellow: {fileID: 304174051}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1791264982
 Transform:
   m_ObjectHideFlags: 0
@@ -2527,10 +2497,9 @@ MonoBehaviour:
     left: {fileID: 1635058097}
     right: {fileID: 0}
     above: {fileID: 2089243386}
-    bellow: {fileID: 1024335083}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1801385670
 Transform:
   m_ObjectHideFlags: 0
@@ -2575,10 +2544,9 @@ MonoBehaviour:
     left: {fileID: 700667853}
     right: {fileID: 1696875534}
     above: {fileID: 466921996}
-    bellow: {fileID: 2012335951}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &1928943591
 Transform:
   m_ObjectHideFlags: 0
@@ -2623,10 +2591,9 @@ MonoBehaviour:
     left: {fileID: 1238081679}
     right: {fileID: 699774920}
     above: {fileID: 1928943590}
-    bellow: {fileID: 2093070919}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &2012335952
 Transform:
   m_ObjectHideFlags: 0
@@ -2684,10 +2651,9 @@ MonoBehaviour:
     left: {fileID: 1254469950}
     right: {fileID: 0}
     above: {fileID: 0}
-    bellow: {fileID: 1801385669}
+    below: {fileID: 0}
   _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!1 &2093070918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,10 +2685,9 @@ MonoBehaviour:
     left: {fileID: 1153403724}
     right: {fileID: 1754966657}
     above: {fileID: 2012335951}
-    bellow: {fileID: 0}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &2093070920
 Transform:
   m_ObjectHideFlags: 0
@@ -2767,10 +2732,9 @@ MonoBehaviour:
     left: {fileID: 786566089}
     right: {fileID: 167945221}
     above: {fileID: 939350219}
-    bellow: {fileID: 1466209927}
+    below: {fileID: 0}
   _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
     type: 2}
-  tilePosition: {x: 0, y: 0}
 --- !u!4 &2117184900
 Transform:
   m_ObjectHideFlags: 0

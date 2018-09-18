@@ -35,7 +35,6 @@ public class TileSlotGenerator : MonoBehaviour
         GameObject tileSlotGameObject = Instantiate(tileSlotPrefab, new Vector3(x, y, 0), Quaternion.identity, transform);
         tileSlotGameObject.name = "Tile Slot " + x + " " + y;
         tiles[x, y] = tileSlotGameObject.GetComponent<TileSlot>();
-        tiles[x, y].tilePosition = new Vector2Int(x,y);
       }
     }
     return tiles;
@@ -49,7 +48,7 @@ public class TileSlotGenerator : MonoBehaviour
         if (x > 0)
           tileSlots[x, y].adjacentTiles.left = tileSlots[x - 1, y];
         if (y > 0)
-          tileSlots[x, y].adjacentTiles.bellow = tileSlots[x, y - 1];
+          tileSlots[x, y].adjacentTiles.below  = tileSlots[x, y - 1];
         if (x < tileAmount.columns - 1)
           tileSlots[x, y].adjacentTiles.right = tileSlots[x + 1, y];
         if (y < tileAmount.rows - 1)
