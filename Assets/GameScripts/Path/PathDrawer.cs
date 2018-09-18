@@ -33,7 +33,7 @@ public class PathDrawer : MonoBehaviour {
 		}
 		Debug.Log(lineRenderer.positionCount);
 	}
-	private void OnPostRender() {
-		Debug.Log("post render");
+	public void ClearLine(){
+		lineRenderer.positionCount = 0;
 	}
 }
