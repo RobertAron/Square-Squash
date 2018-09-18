@@ -29,11 +29,6 @@ public class RandomItemGenerator : TileItem
     // Do nothing
   }
 
-  public override DotPalette GetPathColor()
-  {
-    return DotPalette.None;
-  }
-
   private void FixedUpdate()
   {
     dotsSpawned = 0;

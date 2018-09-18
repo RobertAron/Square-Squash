@@ -8,7 +8,6 @@ public abstract class TileItem : MonoBehaviour
   public TileSlot tileSlot;
   public abstract TileItem GetItemFromItem();
   public abstract void OnClearItem();
-  public abstract DotPalette GetPathColor();
   public abstract void DrawItemGizmo(Vector3 position);
 
   private void FixedUpdate()

@@ -30,8 +30,4 @@ public class BasicDot : TileItem
     Gizmos.DrawWireSphere(position, transform.localScale.x / 2);
   }
 
-  public override DotPalette GetPathColor()
-  {
-    return dotColor;
-  }
 }
