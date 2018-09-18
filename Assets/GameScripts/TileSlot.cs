@@ -7,7 +7,8 @@ public class TileSlot : MonoBehaviour
 {
   public AdjacentTiles adjacentTiles;
   // Public for editor reasons, but should not be manually changed.
-  public TileItem _tileItem;
+  [SerializeField]
+  private TileItem _tileItem;
   
 	private void OnDrawGizmos()
   {

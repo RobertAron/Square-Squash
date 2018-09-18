@@ -14,7 +14,7 @@ public class PathController : MonoBehaviour
     pathModel = GetComponent<PathModel>();
   }
 
-  public void initialPress(Vector3 pressLocation)
+  public void InitialPress(Vector3 pressLocation)
   {
     TileSlot tileSlot = RaycastForTileSlot(pressLocation);
     if(tileSlot==null) return;

@@ -35,4 +35,16 @@ public class PathModel : MonoBehaviour
 		}
 		path.Clear();
 	}
+
+  public List<Vector3> GetPathLocations()
+  {
+    List<Vector3> pathLocationList = new List<Vector3>();
+    foreach(TileSlot slot in path){
+			pathLocationList.Add(slot.transform.position);
+		}
+    return pathLocationList;
+  }
+	public DotPalette GetPathColor(){
+		return pathColor;
+	}
 }
