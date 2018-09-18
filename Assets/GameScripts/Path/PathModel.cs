@@ -24,6 +24,7 @@ public class PathModel : MonoBehaviour
 		if(path.Count == 0) return;
 		if(itemType!=DotPalette.All&&itemType!=pathColor) return;
 		if(!lastSlot.adjacentTiles.Contains(newTile)) return;
+		if(path.Contains(newTile)) return;
 		path.Add(newTile);
 	}
 	public void PathRelease()

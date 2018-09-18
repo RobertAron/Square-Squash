@@ -7,6 +7,7 @@ public class PathDrawer : MonoBehaviour {
   PathModel pathModel;
 	LineRenderer lineRenderer;
 	Renderer renderer;
+	Vector3 scaleVector = new Vector3(.1f,.1f,.1f);
 
   void Start()
   {
@@ -22,14 +23,18 @@ public class PathDrawer : MonoBehaviour {
 		List<Vector3> pathLocations= pathModel.GetPathLocations();
 		pos.z = 0;
 		pathLocations.Add(pos);
-		Debug.Log(fingerPosition);
 
 		Color currentColor = ColorSchema.GetColor(pathModel.GetPathColor());
 		
 		renderer.material.color =  currentColor;
-		lineRenderer.positionCount = pathLocations.Count;
+		lineRenderer.positionCount = pathLocations.Count*2-1;
 		for(int i=0;i<pathLocations.Count;i++){
-			lineRenderer.SetPosition(i,pathLocations[i]);
+			if(i!=0){
+				Vector3 newDirectionSmall = Vector3.Scale(pathLocations[i] - pathLocations[i-1],scaleVector);
+				Debug.Log(newDirectionSmall);
+				lineRenderer.SetPosition(i*2-1,pathLocations[i-1]+newDirectionSmall);
+			}
+			lineRenderer.SetPosition(i*2,pathLocations[i]);
 		}
 		Debug.Log(lineRenderer.positionCount);
 	}

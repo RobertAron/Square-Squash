@@ -52,7 +52,7 @@ Transform:
   m_GameObject: {fileID: 1605173469081740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4559087910274518}
   m_Father: {fileID: 0}
@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d678d959d755a4c4f892e14a1d2cc319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileSlot: {fileID: 0}
   dotColor: 1
+  tileSlot: {fileID: 0}

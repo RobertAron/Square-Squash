@@ -56,9 +56,8 @@ MonoBehaviour:
     left: {fileID: 0}
     right: {fileID: 0}
     above: {fileID: 0}
-    bellow: {fileID: 0}
+    below: {fileID: 0}
   _tileItem: {fileID: 0}
-  tilePosition: {x: 0, y: 0}
 --- !u!135 &135748271466052956
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -69,5 +68,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
