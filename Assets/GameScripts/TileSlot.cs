@@ -8,23 +8,23 @@ public class TileSlot : MonoBehaviour
   public AdjacentTiles adjacentTiles;
   // Public for editor reasons, but should not be manually changed.
   [SerializeField]
-  private TileItem _tileItem;
+  private TileItem tileItem;
   
 	private void OnDrawGizmos()
   {
     Gizmos.DrawWireCube(transform.position, transform.localScale);
-    if (_tileItem != null)
-      _tileItem.DrawItemGizmo(transform.position);
+    if (tileItem != null)
+      tileItem.DrawItemGizmo(transform.position);
   }
 
   private void Awake()
   {
-    if (_tileItem != null)
+    if (tileItem != null)
     {
-      GameObject initialItem = Instantiate(_tileItem.gameObject, transform.position, transform.rotation);
+      GameObject initialItem = Instantiate(tileItem.gameObject, transform.position, transform.rotation);
       TileItem initialTileItem = initialItem.GetComponent<TileItem>();
-      _tileItem = initialTileItem;
-      _tileItem.tileSlot = this;
+      tileItem = initialTileItem;
+      tileItem.tileSlot = this;
     }
     else
       throw new System.Exception("Item slot is missing item on Awake.");
@@ -32,7 +32,7 @@ public class TileSlot : MonoBehaviour
 
   private void SetNewItem(TileItem newItem)
   {
-    _tileItem = newItem;
+    tileItem = newItem;
     newItem.tileSlot = this;
   }
   
@@ -44,16 +44,16 @@ public class TileSlot : MonoBehaviour
   
 	public TileItem GetItemFromSlot()
   {
-    return _tileItem.GetItemFromItem();
+    return tileItem.GetItemFromItem();
   }
   
 	public DotPalette GetItemType()
   {
-    return _tileItem.dotColor;
+    return tileItem.dotColor;
   }
 
 	public void ClearTileItem(){
-		_tileItem.OnClearItem();
+		tileItem.OnClearItem();
 	}
 }
 

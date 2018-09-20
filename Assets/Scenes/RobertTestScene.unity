@@ -146,8 +146,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 309301267}
     below: {fileID: 1157503449}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &44224822
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -206,8 +205,7 @@ MonoBehaviour:
     right: {fileID: 824359424}
     above: {fileID: 637091651}
     below: {fileID: 388146850}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &89426646
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -266,8 +264,7 @@ MonoBehaviour:
     right: {fileID: 1603803482}
     above: {fileID: 1694635491}
     below: {fileID: 717273678}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &126102397
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -326,8 +323,7 @@ MonoBehaviour:
     right: {fileID: 451303353}
     above: {fileID: 1219882428}
     below: {fileID: 1711702248}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &159647464
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -386,8 +382,7 @@ MonoBehaviour:
     right: {fileID: 1727285382}
     above: {fileID: 1763756212}
     below: {fileID: 530702478}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &196871543
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -446,8 +441,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 725876198}
     below: {fileID: 44224821}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &309301268
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -506,8 +500,7 @@ MonoBehaviour:
     right: {fileID: 1694635491}
     above: {fileID: 2093244594}
     below: {fileID: 657876980}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &330185237
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -566,8 +559,7 @@ MonoBehaviour:
     right: {fileID: 693781032}
     above: {fileID: 89426645}
     below: {fileID: 1928676917}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &388146851
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -626,8 +618,7 @@ MonoBehaviour:
     right: {fileID: 717273678}
     above: {fileID: 657876980}
     below: {fileID: 602512795}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &412053823
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -686,8 +677,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 855081398}
     below: {fileID: 1771205958}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &451303354
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -746,8 +736,7 @@ MonoBehaviour:
     right: {fileID: 644574687}
     above: {fileID: 587060553}
     below: {fileID: 637091651}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &456072580
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -806,8 +795,7 @@ MonoBehaviour:
     right: {fileID: 857656698}
     above: {fileID: 1411458709}
     below: {fileID: 1219882428}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &460128829
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -841,11 +829,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 507252990}
-  - component: {fileID: 507252989}
-  - component: {fileID: 507252988}
-  - component: {fileID: 507252991}
+  - component: {fileID: 507252994}
   - component: {fileID: 507252992}
+  - component: {fileID: 507252991}
+  - component: {fileID: 507252988}
   - component: {fileID: 507252993}
+  - component: {fileID: 507252989}
   m_Layer: 0
   m_Name: FingerPath
   m_TagString: Untagged
@@ -859,7 +848,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507252987}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02eacf05212a2fc4d82f3192deec352d, type: 3}
   m_Name: 
@@ -867,7 +856,7 @@ MonoBehaviour:
   onInitialPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507252989}
+      - m_Target: {fileID: 507252994}
         m_MethodName: InitialPress
         m_Mode: 0
         m_Arguments:
@@ -883,7 +872,7 @@ MonoBehaviour:
   onRelease:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507252989}
+      - m_Target: {fileID: 507252994}
         m_MethodName: OnRelease
         m_Mode: 1
         m_Arguments:
@@ -909,7 +898,7 @@ MonoBehaviour:
   onHeld:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507252989}
+      - m_Target: {fileID: 507252994}
         m_MethodName: OnHeld
         m_Mode: 0
         m_Arguments:
@@ -941,7 +930,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 507252987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4c7fb14e7409574aae4c0949b5b2a67, type: 3}
+  m_Script: {fileID: 11500000, guid: 57e3ec8d0844a5b4d9c045e14e6afedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &507252990
@@ -1069,6 +1058,17 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &507252994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507252987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c7fb14e7409574aae4c0949b5b2a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &530702477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,8 +1102,7 @@ MonoBehaviour:
     right: {fileID: 2077070774}
     above: {fileID: 196871542}
     below: {fileID: 2093244594}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &530702479
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1162,8 +1161,7 @@ MonoBehaviour:
     right: {fileID: 1559211174}
     above: {fileID: 0}
     below: {fileID: 456072579}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &587060554
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1222,8 +1220,7 @@ MonoBehaviour:
     right: {fileID: 1450627082}
     above: {fileID: 412053822}
     below: {fileID: 0}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &602512796
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1282,8 +1279,7 @@ MonoBehaviour:
     right: {fileID: 1062088731}
     above: {fileID: 456072579}
     below: {fileID: 89426645}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &637091652
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1342,8 +1338,7 @@ MonoBehaviour:
     right: {fileID: 1308092694}
     above: {fileID: 0}
     below: {fileID: 910093519}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &638310158
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1402,8 +1397,7 @@ MonoBehaviour:
     right: {fileID: 309301267}
     above: {fileID: 1559211174}
     below: {fileID: 1062088731}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &644574688
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1462,8 +1456,7 @@ MonoBehaviour:
     right: {fileID: 126102396}
     above: {fileID: 330185236}
     below: {fileID: 412053822}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &657876981
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1522,8 +1515,7 @@ MonoBehaviour:
     right: {fileID: 1827288945}
     above: {fileID: 824359424}
     below: {fileID: 1411458709}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &693781033
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1582,8 +1574,7 @@ MonoBehaviour:
     right: {fileID: 1880089217}
     above: {fileID: 126102396}
     below: {fileID: 1450627082}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &717273679
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1667,8 +1658,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 0}
     below: {fileID: 309301267}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!1 &824359423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,8 +1692,7 @@ MonoBehaviour:
     right: {fileID: 1157503449}
     above: {fileID: 1062088731}
     below: {fileID: 693781032}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &824359425
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1839,8 +1828,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 857656698}
     below: {fileID: 451303353}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &855081399
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1899,8 +1887,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 1515581325}
     below: {fileID: 855081398}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &857656699
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1959,8 +1946,7 @@ MonoBehaviour:
     right: {fileID: 1675892038}
     above: {fileID: 638310157}
     below: {fileID: 1763756212}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &910093520
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2019,8 +2005,7 @@ MonoBehaviour:
     right: {fileID: 44224821}
     above: {fileID: 644574687}
     below: {fileID: 824359424}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1062088732
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2174,8 +2159,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 44224821}
     below: {fileID: 1827288945}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1157503450
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2234,8 +2218,7 @@ MonoBehaviour:
     right: {fileID: 855081398}
     above: {fileID: 460128828}
     below: {fileID: 159647463}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1219882429
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2294,8 +2277,7 @@ MonoBehaviour:
     right: {fileID: 1711702248}
     above: {fileID: 1880089217}
     below: {fileID: 0}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1237014865
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2354,8 +2336,7 @@ MonoBehaviour:
     right: {fileID: 587060553}
     above: {fileID: 0}
     below: {fileID: 1675892038}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1308092695
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2414,8 +2395,7 @@ MonoBehaviour:
     right: {fileID: 1928676917}
     above: {fileID: 2077070774}
     below: {fileID: 1694635491}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1398174882
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2474,8 +2454,7 @@ MonoBehaviour:
     right: {fileID: 1515581325}
     above: {fileID: 693781032}
     below: {fileID: 460128828}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1411458710
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2534,8 +2513,7 @@ MonoBehaviour:
     right: {fileID: 1237014864}
     above: {fileID: 717273678}
     below: {fileID: 0}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1450627083
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2594,8 +2572,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 1827288945}
     below: {fileID: 857656698}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1515581326
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2654,8 +2631,7 @@ MonoBehaviour:
     right: {fileID: 725876198}
     above: {fileID: 0}
     below: {fileID: 644574687}
-  _tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1559211175
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2714,8 +2690,7 @@ MonoBehaviour:
     right: {fileID: 1219882428}
     above: {fileID: 1729605710}
     below: {fileID: 1880089217}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1603803483
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2774,8 +2749,7 @@ MonoBehaviour:
     right: {fileID: 456072579}
     above: {fileID: 1308092694}
     below: {fileID: 1768087732}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1675892039
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2834,8 +2808,7 @@ MonoBehaviour:
     right: {fileID: 1729605710}
     above: {fileID: 1398174881}
     below: {fileID: 126102396}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1694635492
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2894,8 +2867,7 @@ MonoBehaviour:
     right: {fileID: 1771205958}
     above: {fileID: 159647463}
     below: {fileID: 0}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1711702249
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2954,8 +2926,7 @@ MonoBehaviour:
     right: {fileID: 89426645}
     above: {fileID: 1768087732}
     below: {fileID: 2077070774}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1727285383
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3014,8 +2985,7 @@ MonoBehaviour:
     right: {fileID: 460128828}
     above: {fileID: 1928676917}
     below: {fileID: 1603803482}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1729605711
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3074,8 +3044,7 @@ MonoBehaviour:
     right: {fileID: 1768087732}
     above: {fileID: 910093519}
     below: {fileID: 196871542}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1763756213
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3134,8 +3103,7 @@ MonoBehaviour:
     right: {fileID: 637091651}
     above: {fileID: 1675892038}
     below: {fileID: 1727285382}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1768087733
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3194,8 +3162,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 451303353}
     below: {fileID: 0}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1771205959
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3254,8 +3221,7 @@ MonoBehaviour:
     right: {fileID: 0}
     above: {fileID: 1157503449}
     below: {fileID: 1515581325}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1827288946
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3314,8 +3280,7 @@ MonoBehaviour:
     right: {fileID: 159647463}
     above: {fileID: 1603803482}
     below: {fileID: 1237014864}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1880089218
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3374,8 +3339,7 @@ MonoBehaviour:
     right: {fileID: 1411458709}
     above: {fileID: 388146850}
     below: {fileID: 1729605710}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &1928676918
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3434,8 +3398,7 @@ MonoBehaviour:
     right: {fileID: 388146850}
     above: {fileID: 1727285382}
     below: {fileID: 1398174881}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &2077070775
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3494,8 +3457,7 @@ MonoBehaviour:
     right: {fileID: 1398174881}
     above: {fileID: 530702478}
     below: {fileID: 330185236}
-  _tileItem: {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21,
-    type: 2}
+  tileItem: {fileID: 0}
 --- !u!135 &2093244595
 SphereCollider:
   m_ObjectHideFlags: 0

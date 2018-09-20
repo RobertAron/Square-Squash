@@ -27,16 +27,10 @@ public class PathDrawer : MonoBehaviour {
 		Color currentColor = ColorSchema.GetColor(pathModel.GetPathColor());
 		
 		renderer.material.color =  currentColor;
-		lineRenderer.positionCount = pathLocations.Count*2-1;
+		lineRenderer.positionCount = pathLocations.Count;
 		for(int i=0;i<pathLocations.Count;i++){
-			if(i!=0){
-				Vector3 newDirectionSmall = Vector3.Scale(pathLocations[i] - pathLocations[i-1],scaleVector);
-				Debug.Log(newDirectionSmall);
-				lineRenderer.SetPosition(i*2-1,pathLocations[i-1]+newDirectionSmall);
-			}
-			lineRenderer.SetPosition(i*2,pathLocations[i]);
+			lineRenderer.SetPosition(i,pathLocations[i]);
 		}
-		Debug.Log(lineRenderer.positionCount);
 	}
 	public void ClearLine(){
 		lineRenderer.positionCount = 0;
