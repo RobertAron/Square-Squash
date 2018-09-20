@@ -12,8 +12,6 @@ public class PathController : MonoBehaviour
   private void Start()
   {
     pathModel = GetComponent<PathModel>();
-    Debug.Log("in start on path controller");
-    Debug.Log(pathModel);
   }
 
   public void InitialPress(Vector3 pressLocation)

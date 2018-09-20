@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class BasicDot : TileItem
 {
+  public float acceleration = 2f;
+  private Coroutine currentCoroutine;
 
   private void Awake() {
     GameObject child = transform.GetChild(0).gameObject;
@@ -30,4 +32,23 @@ public class BasicDot : TileItem
     Gizmos.DrawWireSphere(position, transform.localScale.x / 2);
   }
 
+  public override void SetTileSlot(TileSlot tileSlot){
+    base.SetTileSlot(tileSlot);
+    if(currentCoroutine!=null){
+      StopCoroutine(currentCoroutine);
+    }
+    currentCoroutine = StartCoroutine(MoveToNewSlot(tileSlot));
+  }
+
+  IEnumerator MoveToNewSlot(TileSlot tileSlot){
+    Vector3 targetLocation = tileSlot.transform.position;
+    float timeSinceInitial = 0f;
+    while(Vector3.Distance(transform.position,targetLocation)>Mathf.Epsilon){
+      timeSinceInitial+= Time.fixedDeltaTime;
+      float distance = acceleration * timeSinceInitial * Time.fixedDeltaTime;
+      transform.position = Vector3.MoveTowards(transform.position,targetLocation,distance);
+      yield return new WaitForFixedUpdate();
+    }
+    transform.position = targetLocation;
+  }
 }

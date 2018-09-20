@@ -24,7 +24,7 @@ public class TileSlot : MonoBehaviour
       GameObject initialItem = Instantiate(tileItem.gameObject, transform.position, transform.rotation);
       TileItem initialTileItem = initialItem.GetComponent<TileItem>();
       tileItem = initialTileItem;
-      tileItem.tileSlot = this;
+      tileItem.SetTileSlot(this);
     }
     else
       throw new System.Exception("Item slot is missing item on Awake.");
@@ -33,7 +33,7 @@ public class TileSlot : MonoBehaviour
   private void SetNewItem(TileItem newItem)
   {
     tileItem = newItem;
-    newItem.tileSlot = this;
+    tileItem.SetTileSlot(this);
   }
   
 	public void ObtainNewTileItem()
