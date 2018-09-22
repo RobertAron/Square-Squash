@@ -6,7 +6,7 @@ using UnityEngine;
 public class PathDrawer : MonoBehaviour {
   PathModel pathModel;
 	LineRenderer lineRenderer;
-	Renderer renderer;
+	new Renderer renderer;
 	Vector3 scaleVector = new Vector3(.1f,.1f,.1f);
 
   void Start()
