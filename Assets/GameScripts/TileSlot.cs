@@ -9,6 +9,9 @@ public class TileSlot : MonoBehaviour
   // Public for editor reasons, but should not be manually changed.
   [SerializeField]
   private TileItem tileItem;
+
+  // Holds reference incase of shuffle
+  private TileItem thisFameItem;
   
 	private void OnDrawGizmos()
   {
@@ -28,6 +31,10 @@ public class TileSlot : MonoBehaviour
     }
     else
       throw new System.Exception("Item slot is missing item on Awake.");
+  }
+
+  private void Update() {
+    thisFameItem = tileItem;
   }
 
   private void SetNewItem(TileItem newItem)
@@ -53,7 +60,7 @@ public class TileSlot : MonoBehaviour
   }
 
 	public void ClearTileItem(){
-		tileItem.OnClearItem();
+		thisFameItem.OnClearItem();
 	}
 }
 

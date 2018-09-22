@@ -18,10 +18,10 @@ public class PathModel : MonoBehaviour
   }
 	public void AttemptAddPath(TileSlot newTile)
 	{
+		if(path.Count == 0) return;
 		DotPalette itemType = newTile.GetItemType();
 		TileSlot lastSlot = path[path.Count-1];
 		if(lastSlot==newTile) return;
-		if(path.Count == 0) return;
 		if(itemType!=DotPalette.All&&itemType!=pathColor) return;
 		if(!lastSlot.adjacentTiles.Contains(newTile)) return;
 		if(path.Contains(newTile)) return;
@@ -31,8 +31,10 @@ public class PathModel : MonoBehaviour
 	{
 		if(path.Count>1){
 			// TODO: add logic for full square
+			int countCleared = 0;
 			pathColor = DotPalette.None;
 			foreach(TileSlot slot in path){
+				countCleared++;
 				slot.ClearTileItem();
 			}
 		}
