@@ -29,10 +29,12 @@ public class PathModel : MonoBehaviour
 	}
 	public void PathRelease()
 	{
-		// TODO: add logic for full square
-		pathColor = DotPalette.None;
-		foreach(TileSlot slot in path){
-			slot.ClearTileItem();
+		if(path.Count>1){
+			// TODO: add logic for full square
+			pathColor = DotPalette.None;
+			foreach(TileSlot slot in path){
+				slot.ClearTileItem();
+			}
 		}
 		path.Clear();
 	}

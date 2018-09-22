@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4978848855112478}
   - component: {fileID: 114528505891379070}
   m_Layer: 0
-  m_Name: BasicRandomDot
+  m_Name: BasicRandomItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5879e9ecc3ff32e4b842922aab3284e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileSlot: {fileID: 0}
+  dotColor: 6
   possibleItems:
-  - {fileID: 114627607047589048, guid: afd35f4117abf864681059362e1a9f21, type: 2}
-  - {fileID: 114175546146310956, guid: c0c88f4da9ce59040a381fa14840221e, type: 2}
-  - {fileID: 114102784754513410, guid: 5ef5375bf01c4064c8245dec2a79aa2d, type: 2}
-  - {fileID: 114516643961163470, guid: 1f79c9da96a34df48b3dbbc13cf27a17, type: 2}
-  - {fileID: 114283503376556982, guid: 78f6db62fe6ceb04199dad5b810a7f2e, type: 2}
-  - {fileID: 114843429884281904, guid: 58286c9c361fc5d4dad9cd485a510038, type: 2}
+  - {fileID: 114926628422357048, guid: 1ef76a7b773fed944bd9b26f777f5fe9, type: 2}
+  - {fileID: 114840081375117966, guid: 39e68d2603e35bb45aca801b74fac515, type: 2}
+  - {fileID: 114992001551509496, guid: 566872917f2455040907601bc1a83b48, type: 2}
+  - {fileID: 114853239196310404, guid: 238c598a3d0818b42994ebe12cbff5f4, type: 2}
+  - {fileID: 114550891658805790, guid: b28d801d9e9413e45a770a03697231d0, type: 2}
+  - {fileID: 114045136648044226, guid: 4d0c834ffea2079469f290a08d4ddfc7, type: 2}
