@@ -18,10 +18,14 @@ public class PathModel : MonoBehaviour
   }
 	public void AttemptAddPath(TileSlot newTile)
 	{
+		Debug.Log("attempt call");
 		if(path.Count == 0) return;
 		DotPalette itemType = newTile.GetItemType();
 		TileSlot lastSlot = path[path.Count-1];
-		if(lastSlot==newTile) return;
+		if(lastSlot==newTile && path.Count>1){
+			path.Remove(lastSlot);
+			return;
+		} 
 		if(itemType!=DotPalette.All&&itemType!=pathColor) return;
 		if(!lastSlot.adjacentTiles.Contains(newTile)) return;
 		if(path.Contains(newTile)) return;

@@ -7,6 +7,7 @@ using UnityEngine;
 public class PathController : MonoBehaviour
 {
   PathModel pathModel;
+  TileSlot lastPressed = null;
 
 
   private void Start()
@@ -18,12 +19,16 @@ public class PathController : MonoBehaviour
   {
     TileSlot tileSlot = RaycastForTileSlot(pressLocation);
     if(tileSlot==null) return;
+    lastPressed = tileSlot;
     pathModel.SetInitialSlot(tileSlot);
   }
   public void OnHeld(Vector3 pressLocation)
   {
     TileSlot tileSlot = RaycastForTileSlot(pressLocation);
+    if(lastPressed==tileSlot) return;
+    lastPressed = tileSlot;
     if(tileSlot==null) return;
+    Debug.Log("attemp called");
     pathModel.AttemptAddPath(tileSlot);
   }
   public void OnRelease()
