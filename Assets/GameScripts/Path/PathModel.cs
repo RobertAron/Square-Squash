@@ -18,7 +18,6 @@ public class PathModel : MonoBehaviour
   }
 	public void AttemptAddPath(TileSlot newTile)
 	{
-		Debug.Log("attempt call");
 		if(path.Count == 0) return;
 		DotPalette itemType = newTile.GetItemType();
 		TileSlot lastSlot = path[path.Count-1];

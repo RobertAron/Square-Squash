@@ -28,14 +28,12 @@ public class PathController : MonoBehaviour
     if(lastPressed==tileSlot) return;
     lastPressed = tileSlot;
     if(tileSlot==null) return;
-    Debug.Log("attemp called");
     pathModel.AttemptAddPath(tileSlot);
   }
   public void OnRelease()
   {
     pathModel.PathRelease();
   }
-
   private TileSlot RaycastForTileSlot(Vector3 location)
   {
     RaycastHit hit;

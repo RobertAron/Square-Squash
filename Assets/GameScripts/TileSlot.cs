@@ -12,8 +12,8 @@ public class TileSlot : MonoBehaviour
 
   // Holds reference incase of shuffle
   private TileItem thisFameItem;
-  
-	private void OnDrawGizmos()
+
+  private void OnDrawGizmos()
   {
     Gizmos.DrawWireCube(transform.position, transform.localScale);
     if (tileItem != null)
@@ -24,7 +24,7 @@ public class TileSlot : MonoBehaviour
   {
     if (tileItem != null)
     {
-      GameObject initialItem = Instantiate(tileItem.gameObject, transform.position, transform.rotation);
+      GameObject initialItem = Instantiate(tileItem.gameObject, transform.position, transform.rotation, transform);
       TileItem initialTileItem = initialItem.GetComponent<TileItem>();
       tileItem = initialTileItem;
       tileItem.SetTileSlot(this);
@@ -33,7 +33,8 @@ public class TileSlot : MonoBehaviour
       throw new System.Exception("Item slot is missing item on Awake.");
   }
 
-  private void Update() {
+  private void Update()
+  {
     thisFameItem = tileItem;
   }
 
@@ -42,26 +43,28 @@ public class TileSlot : MonoBehaviour
     tileItem = newItem;
     tileItem.SetTileSlot(this);
   }
-  
-	public void ObtainNewTileItem()
+
+  public void ObtainNewTileItem()
   {
     TileItem newItem = adjacentTiles.above.GetItemFromSlot();
+    newItem.transform.parent = transform;
     SetNewItem(newItem);
   }
-  
-	public TileItem GetItemFromSlot()
+
+  public TileItem GetItemFromSlot()
   {
     return tileItem.GetItemFromItem();
   }
-  
-	public DotPalette GetItemType()
+
+  public DotPalette GetItemType()
   {
     return tileItem.dotColor;
   }
 
-	public void ClearTileItem(){
-		thisFameItem.OnClearItem();
-	}
+  public void ClearTileItem()
+  {
+    thisFameItem.OnClearItem();
+  }
 }
 
 [System.Serializable]
