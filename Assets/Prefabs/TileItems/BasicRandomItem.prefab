@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1519433450680258}
+  m_IsPrefabAsset: 1
+--- !u!1 &1519433450680258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4978848855112478}
+  - component: {fileID: 114528505891379070}
+  m_Layer: 0
+  m_Name: BasicRandomItem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4978848855112478
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519433450680258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114528505891379070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519433450680258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5879e9ecc3ff32e4b842922aab3284e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dotColor: 6
+  possibleItems:
+  - {fileID: 114926628422357048, guid: 1ef76a7b773fed944bd9b26f777f5fe9, type: 2}
+  - {fileID: 114840081375117966, guid: 39e68d2603e35bb45aca801b74fac515, type: 2}
+  - {fileID: 114992001551509496, guid: 566872917f2455040907601bc1a83b48, type: 2}
+  - {fileID: 114853239196310404, guid: 238c598a3d0818b42994ebe12cbff5f4, type: 2}
+  - {fileID: 114550891658805790, guid: b28d801d9e9413e45a770a03697231d0, type: 2}
+  - {fileID: 114045136648044226, guid: 4d0c834ffea2079469f290a08d4ddfc7, type: 2}
