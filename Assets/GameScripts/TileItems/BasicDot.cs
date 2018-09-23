@@ -8,7 +8,6 @@ public class BasicDot : TileItem
 {
   public float acceleration = 2f;
   private Coroutine currentCoroutine;
-  public bool wtf = false;
 
   private void Awake() {
     GameObject child = transform.GetChild(0).gameObject;
