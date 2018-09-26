@@ -27,6 +27,7 @@ public class PathModel : MonoBehaviour
       path.Remove(lastSlot);
       return;
     }
+    if(path.Count>1 && path[path.Count - 2]==newTile) return;
     if (ContainsLoop()) return;
     if (itemType != ColorPalette.All && itemType != pathColor) return;
     if (!lastSlot.adjacentTiles.Contains(newTile)) return;
