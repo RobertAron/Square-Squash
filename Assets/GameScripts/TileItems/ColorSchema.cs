@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum DotPalette{Pink,Orange,Red,Blue,Green,Purple,None,All}
+public enum ColorPalette{Pink,Orange,Red,Blue,Green,Purple,None,All}
 
 public static class ColorSchema {
 
@@ -20,18 +20,18 @@ public static class ColorSchema {
 	#endregion
 
   // https://flatuicolors.com/palette/ca
-  public static Color GetColor(DotPalette color){
-    if(color==DotPalette.Pink)
+  public static Color GetColor(ColorPalette color){
+    if(color==ColorPalette.Pink)
       return pink;
-    if(color==DotPalette.Orange)
+    if(color==ColorPalette.Orange)
       return orange;
-    if(color==DotPalette.Red)
+    if(color==ColorPalette.Red)
       return red;
-    if(color==DotPalette.Blue)
+    if(color==ColorPalette.Blue)
       return blue;
-    if(color==DotPalette.Green)
+    if(color==ColorPalette.Green)
       return green;
-    if(color==DotPalette.Purple)
+    if(color==ColorPalette.Purple)
       return purple;
     return error;
   }

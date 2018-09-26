@@ -4,10 +4,10 @@ using UnityEngine;
 
 public abstract class TileItem : MonoBehaviour
 {
-  public DotPalette dotColor;
+  public ColorPalette itemColor;
   protected TileSlot tileSlot;
   public abstract TileItem GetItemFromItem();
-  public abstract void OnClearItem();
+  public abstract void ClearItem();
   public abstract void DrawItemGizmo(Vector3 position);
   
   

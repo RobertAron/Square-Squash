@@ -10,9 +10,6 @@ public class TileSlot : MonoBehaviour
   [SerializeField]
   private TileItem tileItem;
 
-  // Holds reference incase of shuffle
-  private TileItem thisFameItem;
-
   private void OnDrawGizmos()
   {
     Gizmos.DrawWireCube(transform.position, transform.localScale);
@@ -33,11 +30,6 @@ public class TileSlot : MonoBehaviour
       throw new System.Exception("Item slot is missing item on Awake.");
   }
 
-  private void Update()
-  {
-    thisFameItem = tileItem;
-  }
-
   private void SetNewItem(TileItem newItem)
   {
     tileItem = newItem;
@@ -46,24 +38,23 @@ public class TileSlot : MonoBehaviour
 
   public void ObtainNewTileItem()
   {
-    TileItem newItem = adjacentTiles.above.GetItemFromSlot();
+    TileItem newItem = adjacentTiles.above.PullItemFromSlot();
     newItem.transform.parent = transform;
     SetNewItem(newItem);
   }
 
-  public TileItem GetItemFromSlot()
+  public TileItem PullItemFromSlot()
   {
     return tileItem.GetItemFromItem();
   }
 
-  public DotPalette GetItemType()
-  {
-    return tileItem.dotColor;
+  public TileItem GetItem(){
+    return tileItem;
   }
 
-  public void ClearTileItem()
+  public ColorPalette GetItemType()
   {
-    thisFameItem.OnClearItem();
+    return tileItem.itemColor;
   }
 }
 

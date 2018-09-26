@@ -8,11 +8,13 @@ public class PathController : MonoBehaviour
 {
   PathModel pathModel;
   TileSlot lastPressed = null;
+  SpecialActions specialActions;
 
 
   private void Start()
   {
     pathModel = GetComponent<PathModel>();
+    specialActions = SpecialActions.instance;
   }
 
   public void InitialPress(Vector3 pressLocation)
@@ -32,7 +34,11 @@ public class PathController : MonoBehaviour
   }
   public void OnRelease()
   {
-    pathModel.PathRelease();
+    if(pathModel.ContainsLoop())
+			specialActions.ClearAllColor(pathModel.GetPathColor());
+    else if (pathModel.ContainsLongPath())
+			pathModel.ClearPathItems();
+    pathModel.PathReset();
   }
   private TileSlot RaycastForTileSlot(Vector3 location)
   {
