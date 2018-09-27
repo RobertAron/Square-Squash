@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PathModel),typeof(LineRenderer))]
+[RequireComponent(typeof(PathModel),typeof(SimpleLineRenderer))]
 public class PathDrawer : MonoBehaviour {
   PathModel pathModel;
-	LineRenderer lineRenderer;
+	SimpleLineRenderer lineRenderer;
 	new Renderer renderer;
 	Vector3 scaleVector = new Vector3(.1f,.1f,.1f);
 
   void Start()
   {
     pathModel = GetComponent<PathModel>();
-		lineRenderer = GetComponent<LineRenderer>();
+		lineRenderer = GetComponent<SimpleLineRenderer>();
 		renderer = GetComponent<Renderer>();
 	}
 
@@ -27,12 +27,11 @@ public class PathDrawer : MonoBehaviour {
 		Color currentColor = ColorSchema.GetColor(pathModel.GetPathColor());
 		
 		renderer.material.color =  currentColor;
-		lineRenderer.positionCount = pathLocations.Count;
 		for(int i=0;i<pathLocations.Count;i++){
-			lineRenderer.SetPosition(i,pathLocations[i]);
+			lineRenderer.SetNewPath(pathLocations.ToArray());
 		}
 	}
 	public void ClearLine(){
-		lineRenderer.positionCount = 0;
+		lineRenderer.SetNewPath(new Vector3[0]);
 	}
 }
