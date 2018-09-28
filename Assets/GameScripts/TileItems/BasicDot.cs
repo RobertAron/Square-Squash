@@ -6,12 +6,16 @@ using UnityEngine;
 
 public class BasicDot : TileItem
 {
-  public float acceleration = 2f;
+  float acceleration = 20f;
   private Coroutine currentCoroutine;
+  private PointSystem pointSystem;
 
   private void Awake() {
     GameObject child = transform.GetChild(0).gameObject;
-    child.GetComponent<Renderer>().material.color =  ColorSchema.GetColor(dotColor);
+    child.GetComponent<Renderer>().material.color =  ColorSchema.GetColor(itemColor);
+  }
+  private void Start() {
+    pointSystem = PointSystem.instance;
   }
 
   public override TileItem GetItemFromItem()
@@ -20,15 +24,16 @@ public class BasicDot : TileItem
     return this;
   }
 
-  public override void OnClearItem()
+  public override void ClearItem()
   {
+    pointSystem.AddPoint();
     tileSlot.ObtainNewTileItem();
 		Destroy(this.gameObject);
   }
 
   public override void DrawItemGizmo(Vector3 position)
   {
-    Gizmos.color = ColorSchema.GetColor(dotColor);
+    Gizmos.color = ColorSchema.GetColor(itemColor);
     Gizmos.DrawWireSphere(position, transform.localScale.x / 2);
   }
 

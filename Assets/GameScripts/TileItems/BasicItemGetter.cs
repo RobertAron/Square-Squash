@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomItemGenerator : TileItem
+public class BasicItemGetter : TileItem
 {
-  public TileItem[] possibleItems;
-  private int dotsSpawned = 0;
+  
+  int dotsSpawned = 0;
+  ItemGeneratorController itemGenerator;
 
+  void Start(){
+    itemGenerator = ItemGeneratorController.instance;
+  }
 
   public override void DrawItemGizmo(Vector3 position)
   {
@@ -19,12 +23,12 @@ public class RandomItemGenerator : TileItem
     Vector3 dotSpawnLocation = transform.position;
     dotSpawnLocation.y += (dotsSpawned * transform.localScale.x);
     dotsSpawned++;
-    TileItem itemType = possibleItems[Random.Range(0, possibleItems.Length)];
-    GameObject newItem = Instantiate(itemType.gameObject, dotSpawnLocation, transform.rotation);
+    TileItem newItemPrefab = itemGenerator.GetNewItem();
+    GameObject newItem = Instantiate(newItemPrefab.gameObject, dotSpawnLocation, transform.rotation);
     return newItem.GetComponent<TileItem>();
   }
 
-  public override void OnClearItem()
+  public override void ClearItem()
   {
     // Do nothing
   }
