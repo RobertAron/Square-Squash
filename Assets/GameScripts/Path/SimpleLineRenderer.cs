@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// [RequireComponent(typeof(MeshRenderer))]
 [ExecuteInEditMode]
+[RequireComponent(typeof(MeshRenderer),typeof(MeshFilter))]
 public class SimpleLineRenderer : MonoBehaviour
 {
 
@@ -15,7 +15,7 @@ public class SimpleLineRenderer : MonoBehaviour
   MeshFilter mf;
   Mesh mesh;
 
-  void RebuildPathMash()
+  void RebuildMesh()
   {
     float lineHalf = lineWidth / 2;
     Vector3[] vertices = new Vector3[path.Length * 4];
@@ -72,7 +72,7 @@ public class SimpleLineRenderer : MonoBehaviour
   private void OnValidate()
   {
     if (mesh != null)
-      RebuildPathMash();
+      RebuildMesh();
   }
 
   // Use this for initialization
@@ -81,12 +81,12 @@ public class SimpleLineRenderer : MonoBehaviour
     mesh = new Mesh();
     mf = GetComponent<MeshFilter>();
     mf.mesh = mesh;
-		RebuildPathMash();
+		RebuildMesh();
   }
 
   public void SetNewPath(Vector3[] path)
   {
     this.path = path;
-    RebuildPathMash();
+    RebuildMesh();
   }
 }
