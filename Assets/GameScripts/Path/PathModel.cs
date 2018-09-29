@@ -20,10 +20,12 @@ public class PathModel : MonoBehaviour
   {
     // Don't add to empty path
     if (path.Count == 0) return;
+    // No doubling back
     if (path.Count > 1 && path[path.Count - 2] == newTile) return;
     
     ColorPalette itemType = newTile.GetItemType();
     TileSlot lastSlot = path[path.Count - 1];
+    // Item must be the same color as the path, or must be 'all'
     if (itemType != ColorPalette.All && itemType != pathColor) return;
 
     // If last item, remove last item
@@ -32,8 +34,10 @@ public class PathModel : MonoBehaviour
       path.RemoveAt(path.Count - 1);
       return;
     }
-    if (ContainsLoop()) return;
 
+    // Don't add more items on loop
+    if (ContainsLoop()) return;
+    // Check if the new tile is adjacent our current one.
     if (!lastSlot.adjacentTiles.Contains(newTile)) return;
     path.Add(newTile);
   }
