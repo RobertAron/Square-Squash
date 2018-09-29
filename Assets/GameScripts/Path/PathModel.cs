@@ -18,20 +18,27 @@ public class PathModel : MonoBehaviour
   }
   public void AttemptAddPath(TileSlot newTile)
   {
-    // This will probably need to change into a switch case
+    // Don't add to empty path
     if (path.Count == 0) return;
+    // No doubling back
+    if (path.Count > 1 && path[path.Count - 2] == newTile) return;
+    
     ColorPalette itemType = newTile.GetItemType();
     TileSlot lastSlot = path[path.Count - 1];
+    // Item must be the same color as the path, or must be 'all'
+    if (itemType != ColorPalette.All && itemType != pathColor) return;
+
+    // If last item, remove last item
     if (lastSlot == newTile && path.Count > 1)
     {
-      path.Remove(lastSlot);
+      path.RemoveAt(path.Count - 1);
       return;
     }
-    if(path.Count>1 && path[path.Count - 2]==newTile) return;
+
+    // Don't add more items on loop
     if (ContainsLoop()) return;
-    if (itemType != ColorPalette.All && itemType != pathColor) return;
+    // Check if the new tile is adjacent our current one.
     if (!lastSlot.adjacentTiles.Contains(newTile)) return;
-    // if(path.Contains(newTile)) return;
     path.Add(newTile);
   }
   public void PathReset()
@@ -66,18 +73,18 @@ public class PathModel : MonoBehaviour
     return pathColor;
   }
 
-	public bool ContainsLongPath()
-	{
-		if(path.Count>1) return true;
-		return false;
-	}
+  public bool ContainsLongPath()
+  {
+    if (path.Count > 1) return true;
+    return false;
+  }
 
   public bool ContainsLoop()
   {
+    if(path.Count<2) return false;
     TileSlot lastSlot = path[path.Count - 1];
     List<TileSlot> butLast = new List<TileSlot>(path);
     butLast.RemoveAt(butLast.Count - 1);
-    if (butLast.Contains(lastSlot)) return true;
-    return false;
+    return butLast.Contains(lastSlot);
   }
 }
