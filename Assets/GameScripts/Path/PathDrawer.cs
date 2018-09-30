@@ -7,7 +7,6 @@ public class PathDrawer : MonoBehaviour {
   PathModel pathModel;
 	SimpleLineRenderer lineRenderer;
 	new Renderer renderer;
-	Vector3 scaleVector = new Vector3(.1f,.1f,.1f);
 
   void Start()
   {
