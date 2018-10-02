@@ -34,7 +34,8 @@ public class BasicDot : TileItem
   public override void DrawItemGizmo(Vector3 position)
   {
     Gizmos.color = ColorSchema.GetColor(itemColor);
-    Gizmos.DrawWireSphere(position, transform.localScale.x / 2);
+    MeshFilter mf = GetComponentInChildren<MeshFilter>();
+    Gizmos.DrawMesh(mf.sharedMesh,position,mf.transform.rotation,mf.transform.lossyScale);
   }
 
   public override void SetTileSlot(TileSlot tileSlot){
