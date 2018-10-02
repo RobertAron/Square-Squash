@@ -28,6 +28,7 @@ public class RadialView : MonoBehaviour {
 				GameObject newUIElement = Instantiate(radialControllerPrefab.gameObject,transform.position,transform.rotation,transform);
 				RadialController newRadial = newUIElement.GetComponent<RadialController>();
 				colorRadials.Add(color,newRadial);
+				newUIElement.transform.SetSiblingIndex(0);
 				newRadial.Initialize(ColorSchema.GetColor(color));
 			}
 			colorRadials[color].SetTimeRemaining(cooldownValues[color]);
