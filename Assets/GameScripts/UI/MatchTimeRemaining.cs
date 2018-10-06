@@ -7,8 +7,6 @@ using System;
 [RequireComponent(typeof(Text))]
 public class MatchTimeRemaining : MonoBehaviour
 {
-
-  float displayTime;
   TimeTracker timeTracker;
   Text timeText;
   private void Start()
@@ -19,8 +17,7 @@ public class MatchTimeRemaining : MonoBehaviour
 
   private void Update()
   {
-    displayTime -= Time.deltaTime;
-    TimeSpan timeSpan = TimeSpan.FromSeconds(displayTime);
+    TimeSpan timeSpan = TimeSpan.FromSeconds(timeTracker.GetTimeRemaining());
     int minutes = timeSpan.Minutes;
     int seconds = timeSpan.Seconds;
     int ms = timeSpan.Milliseconds;
@@ -29,9 +26,5 @@ public class MatchTimeRemaining : MonoBehaviour
 																	timeSpan.Minutes, 
 																	timeSpan.Seconds, 
 																	timeSpan.Milliseconds);
-  }
-  private void FixedUpdate()
-  {
-    displayTime = timeTracker.GetTimeRemaining();
   }
 }

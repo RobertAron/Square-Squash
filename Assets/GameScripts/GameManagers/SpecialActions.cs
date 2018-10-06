@@ -17,9 +17,9 @@ public class SpecialActions : MonoBehaviour {
   #endregion
 	
 	public GameObject slotsParent;
-	public TimeTracker timeTracker;
-	private TileSlot[] tileSlots;
-	private ItemGeneratorController itemGenerator;
+	TimeTracker timeTracker;
+	TileSlot[] tileSlots;
+	ItemGeneratorController itemGenerator;
 
 	void Start () {
 		tileSlots = slotsParent.GetComponentsInChildren<TileSlot>();

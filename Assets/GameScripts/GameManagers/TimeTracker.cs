@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeTracker : MonoBehaviour {
+public class TimeTracker : MonoBehaviour
+{
 
-	#region  Singleton
+  #region  Singleton
   public static TimeTracker instance;
   private void Awake()
   {
@@ -13,22 +14,48 @@ public class TimeTracker : MonoBehaviour {
       instance = this;
     }
   }
-	#endregion
+  #endregion
 
-	[SerializeField]
-	float timeRemaining = 300;
+  [SerializeField]
+  float timeRemaining = 300;
+  GameOverController gameOverController;
+  bool runTimer = true;
 
-	void FixedUpdate() {
-		timeRemaining-= Time.fixedDeltaTime;
-		if(timeRemaining<0)
-			Debug.Log("TODO: end the game");
-	}
+  private void Start()
+  {
+    gameOverController = GameOverController.instance;
+  }
 
-	public void IncreaseRemainingTime(float increase)
-	{
-		timeRemaining += increase;
-	}
-	public float GetTimeRemaining(){
-		return timeRemaining;
-	}
+
+  void FixedUpdate()
+  {
+    if (runTimer)
+      UpdateTimer();
+  }
+
+  void UpdateTimer()
+  {
+    if (timeRemaining > 0)
+    {
+      if (runTimer) timeRemaining -= Time.fixedDeltaTime;
+    }
+    else
+    {
+      gameOverController.EndGame();
+      timeRemaining = 0;
+    }
+  }
+
+  public void IncreaseRemainingTime(float increase)
+  {
+    timeRemaining += increase;
+  }
+  public float GetTimeRemaining()
+  {
+    return timeRemaining;
+  }
+  public void SetTimerRunning(bool runTimer)
+  {
+    this.runTimer = runTimer;
+  }
 }
