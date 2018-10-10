@@ -513,6 +513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4461699112801282}
   - component: {fileID: 114799738544695700}
+  - component: {fileID: 114311854534527714}
   m_Layer: 0
   m_Name: LevelTwoTest
   m_TagString: Untagged
@@ -1862,6 +1863,17 @@ MonoBehaviour:
     above: {fileID: 0}
     below: {fileID: 114092470902607626}
   tileItem: {fileID: 114528505891379070, guid: 9b13421a36ef9bf45bc3904bd25a22d5, type: 2}
+--- !u!114 &114311854534527714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740865627640426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edff9f33c6936f4a8cb97f538c17bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114336164891714016
 MonoBehaviour:
   m_ObjectHideFlags: 1

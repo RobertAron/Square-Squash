@@ -17,12 +17,12 @@ public class SpecialActions : MonoBehaviour {
   #endregion
 	
 	public GameObject slotsParent;
-	private TileSlot[] tileSlots;
+	private List<TileSlot> tileSlots;
 	private ItemGeneratorController itemGenerator;
 
 	void Start () {
-		tileSlots = slotsParent.GetComponentsInChildren<TileSlot>();
 		itemGenerator = ItemGeneratorController.instance;
+		
 	}
 	public void ClearAllColor(ColorPalette color){
 		itemGenerator.PreventColorSpawn(color);
@@ -34,6 +34,9 @@ public class SpecialActions : MonoBehaviour {
 		foreach(TileItem item in tileItems){
 			item.ClearItem();
 		}
-		
+	}
+
+	public void SetTileSlots(GameObject slotsParent){
+		tileSlots = new List<TileSlot>(slotsParent.GetComponentsInChildren<TileSlot>());
 	}
 }

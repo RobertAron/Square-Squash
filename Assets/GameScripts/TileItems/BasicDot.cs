@@ -8,14 +8,14 @@ public class BasicDot : TileItem
 {
   float acceleration = 20f;
   private Coroutine currentCoroutine;
-  private PointSystem pointSystem;
+  private LevelSystem pointSystem;
 
   private void Awake() {
     GameObject child = transform.GetChild(0).gameObject;
     child.GetComponent<Renderer>().material.color =  ColorSchema.GetColor(itemColor);
   }
   private void Start() {
-    pointSystem = PointSystem.instance;
+    pointSystem = LevelSystem.instance;
   }
 
   public override TileItem GetItemFromItem()
