@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelSystem : MonoBehaviour
 {
 
-	#region  Singleton
+  #region  Singleton
   public static LevelSystem instance;
   private void Awake()
   {
@@ -14,28 +14,31 @@ public class LevelSystem : MonoBehaviour
       instance = this;
     }
   }
-	#endregion
+  #endregion
 
-	[SerializeField]
-	List<Level> levels = new List<Level>();
-	[SerializeField]
-	int currentLevelIndex = 0;
-	SpecialActions specialActions;
-  int pointsRequiredToLevel = 0;
-  GameObject currentLevel;
+  [SerializeField]
+  List<Level> levels = new List<Level>();
+  [SerializeField]
+  int currentLevelIndex = 0;
+
   int itemsCleared = 0;
+  SpecialActions specialActions;
+  GameObject currentLevel;
+  int pointsRequiredToLevel = 0;
 
-	private void Start() {
-		specialActions = SpecialActions.instance;
+  private void Start()
+  {
+    specialActions = SpecialActions.instance;
     UpdateLevel();
-	}
+  }
   public void AddPoint()
   {
     itemsCleared += 1;
-    if(itemsCleared>pointsRequiredToLevel && currentLevelIndex< levels.Count-1) LevelUp();
+    if (itemsCleared > pointsRequiredToLevel && currentLevelIndex < levels.Count - 1) LevelUp();
   }
 
-  void LevelUp(){
+  void LevelUp()
+  {
     currentLevelIndex++;
     Destroy(currentLevel);
     UpdateLevel();
@@ -45,7 +48,7 @@ public class LevelSystem : MonoBehaviour
   {
     currentLevel = Instantiate(levels[currentLevelIndex].gameObject);
     specialActions.SetTileSlots(currentLevel);
-    pointsRequiredToLevel += levels[currentLevelIndex].pointsToAdvance;    
+    pointsRequiredToLevel += levels[currentLevelIndex].pointsToAdvance;
   }
 
 }
