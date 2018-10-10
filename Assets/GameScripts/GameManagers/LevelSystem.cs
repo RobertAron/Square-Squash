@@ -32,7 +32,7 @@ public class LevelSystem : MonoBehaviour
   public void AddPoint()
   {
     itemsCleared += 1;
-    if(itemsCleared>pointsRequiredToLevel) LevelUp();
+    if(itemsCleared>pointsRequiredToLevel && currentLevelIndex< levels.Count-1) LevelUp();
   }
 
   void LevelUp(){
