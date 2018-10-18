@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PointSystem : MonoBehaviour
 {
+  [SerializeField]
+  int itemsCleared = 0;
+  TimeTracker timeTracker;
 
 	#region  Singleton
   public static PointSystem instance;
@@ -16,11 +19,14 @@ public class PointSystem : MonoBehaviour
   }
 	#endregion
 
-  [SerializeField]
-  int itemsCleared = 0;
+  private void Start() {
+    timeTracker = TimeTracker.instance;
+  }
+
   public void AddPoint()
   {
     itemsCleared += 1;
+    timeTracker.IncreaseRemainingTime(0.01f);
   }
 
 }
