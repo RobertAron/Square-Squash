@@ -26,6 +26,10 @@ public class ItemGeneratorController : MonoBehaviour
     // TODO: WHOOPS. The cooldowns should be on items....not colors.
     List<TileItem> currrentlyPossibleItems = new List<TileItem>(possibleItems);
     List<TileItem> currrentlyPossibleItems2 = new List<TileItem>(possibleItems);
+    if(colorCooldowns.Count==currrentlyPossibleItems.Count){
+      // TODO Bonus points here?
+      colorCooldowns.Clear();
+    }
     List<ColorPalette> colorCooldownColors = new List<ColorPalette>(colorCooldowns.Keys);
     foreach(ColorPalette color in colorCooldownColors)
     {

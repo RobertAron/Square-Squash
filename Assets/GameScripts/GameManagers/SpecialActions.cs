@@ -17,14 +17,17 @@ public class SpecialActions : MonoBehaviour {
   #endregion
 	
 	public GameObject slotsParent;
-	private TileSlot[] tileSlots;
-	private ItemGeneratorController itemGenerator;
+	TimeTracker timeTracker;
+	private List<TileSlot> tileSlots;
+	ItemGeneratorController itemGenerator;
 
 	void Start () {
-		tileSlots = slotsParent.GetComponentsInChildren<TileSlot>();
 		itemGenerator = ItemGeneratorController.instance;
+		timeTracker = TimeTracker.instance;
 	}
+
 	public void ClearAllColor(ColorPalette color){
+		timeTracker.IncreaseRemainingTime(1.0f);
 		itemGenerator.PreventColorSpawn(color);
 		List<TileItem> tileItems = new List<TileItem>();
 		foreach(TileSlot tileSlot in tileSlots){
@@ -34,6 +37,9 @@ public class SpecialActions : MonoBehaviour {
 		foreach(TileItem item in tileItems){
 			item.ClearItem();
 		}
-		
+	}
+
+	public void SetTileSlots(GameObject slotsParent){
+		tileSlots = new List<TileSlot>(slotsParent.GetComponentsInChildren<TileSlot>());
 	}
 }
