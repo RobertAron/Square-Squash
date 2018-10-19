@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class RadialView : MonoBehaviour {
@@ -12,7 +13,7 @@ public class RadialView : MonoBehaviour {
 	void Start () {
 		if(itemGeneratorController==null||radialControllerPrefab==null)
 		{
-			Debug.LogError("Radial View is missing require fields");
+			throw new Exception("Radial View is missing require fields");
 			Destroy(this.transform);
 		}
 	}
