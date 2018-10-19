@@ -18,11 +18,10 @@ public class SpecialActions : MonoBehaviour {
 	
 	public GameObject slotsParent;
 	TimeTracker timeTracker;
-	TileSlot[] tileSlots;
+	private List<TileSlot> tileSlots;
 	ItemGeneratorController itemGenerator;
 
 	void Start () {
-		tileSlots = slotsParent.GetComponentsInChildren<TileSlot>();
 		itemGenerator = ItemGeneratorController.instance;
 		timeTracker = TimeTracker.instance;
 	}
@@ -38,6 +37,9 @@ public class SpecialActions : MonoBehaviour {
 		foreach(TileItem item in tileItems){
 			item.ClearItem();
 		}
-		
+	}
+
+	public void SetTileSlots(GameObject slotsParent){
+		tileSlots = new List<TileSlot>(slotsParent.GetComponentsInChildren<TileSlot>());
 	}
 }
