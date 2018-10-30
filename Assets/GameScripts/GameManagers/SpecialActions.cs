@@ -20,12 +20,12 @@ public class SpecialActions : MonoBehaviour {
 	TimeTracker timeTracker;
 	private List<TileSlot> tileSlots;
 	ItemGeneratorController itemGenerator;
-
 	void Start () {
 		itemGenerator = ItemGeneratorController.instance;
 		timeTracker = TimeTracker.instance;
+		tileSlots = new List<TileSlot>(slotsParent.GetComponentsInChildren<TileSlot>());
 	}
-
+	
 	public void ClearAllColor(ColorPalette color){
 		timeTracker.IncreaseRemainingTime(1.0f);
 		itemGenerator.PreventColorSpawn(color);
@@ -37,9 +37,5 @@ public class SpecialActions : MonoBehaviour {
 		foreach(TileItem item in tileItems){
 			item.ClearItem();
 		}
-	}
-
-	public void SetTileSlots(GameObject slotsParent){
-		tileSlots = new List<TileSlot>(slotsParent.GetComponentsInChildren<TileSlot>());
 	}
 }
