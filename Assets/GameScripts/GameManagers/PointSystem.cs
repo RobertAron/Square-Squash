@@ -5,6 +5,8 @@ using UnityEngine;
 public class PointSystem : MonoBehaviour
 {
   [SerializeField]
+  ScoreDisplay scoreDisplay;
+  [SerializeField]
   int itemsCleared = 0;
   TimeTracker timeTracker;
 
@@ -16,17 +18,20 @@ public class PointSystem : MonoBehaviour
     {
       instance = this;
     }
+    if(scoreDisplay==null) throw new System.Exception("Point system is missing score display object.");
   }
 	#endregion
 
   private void Start() {
     timeTracker = TimeTracker.instance;
+    scoreDisplay.UpdateScore(itemsCleared);
   }
 
   public void AddPoint()
   {
     itemsCleared += 1;
     timeTracker.IncreaseRemainingTime(0.01f);
+    scoreDisplay.UpdateScore(itemsCleared);
   }
 
 }

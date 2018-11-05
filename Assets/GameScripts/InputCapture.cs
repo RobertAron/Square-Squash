@@ -19,7 +19,6 @@ public class InputCapture : MonoBehaviour
 
     private void Start() {
         gameOverController = GameOverController.instance;
-        Debug.Log(GameOverController.instance);
     }
 
     void Update()

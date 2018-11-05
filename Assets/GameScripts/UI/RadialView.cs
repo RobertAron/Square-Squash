@@ -14,7 +14,6 @@ public class RadialView : MonoBehaviour {
 		if(itemGeneratorController==null||radialControllerPrefab==null)
 		{
 			throw new Exception("Radial View is missing require fields");
-			Destroy(this.transform);
 		}
 	}
 	
