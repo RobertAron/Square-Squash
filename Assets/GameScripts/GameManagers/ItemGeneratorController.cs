@@ -17,6 +17,12 @@ public class ItemGeneratorController : MonoBehaviour
 
   #endregion
 
+  PointSystem pointSystem;
+
+  private void Start() {
+    pointSystem = PointSystem.instance;
+  }
+
   public TileItem[] possibleItems;
   public float spawnTimeCooldown = 10;
   Dictionary<ColorPalette, float> colorCooldowns = new Dictionary<ColorPalette, float>();
@@ -27,7 +33,7 @@ public class ItemGeneratorController : MonoBehaviour
     List<TileItem> currrentlyPossibleItems = new List<TileItem>(possibleItems);
     List<TileItem> currrentlyPossibleItems2 = new List<TileItem>(possibleItems);
     if(colorCooldowns.Count==currrentlyPossibleItems.Count){
-      // TODO Bonus points here?
+      pointSystem.IncreaseMultiplier();
       colorCooldowns.Clear();
     }
     List<ColorPalette> colorCooldownColors = new List<ColorPalette>(colorCooldowns.Keys);
