@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpecialActions : MonoBehaviour {
+	PointSystem pointSystem;
 
 	#region  Singleton
   public static SpecialActions instance;
@@ -16,6 +17,7 @@ public class SpecialActions : MonoBehaviour {
 
   #endregion
 	
+
 	public GameObject slotsParent;
 	TimeTracker timeTracker;
 	private List<TileSlot> tileSlots;
@@ -23,6 +25,7 @@ public class SpecialActions : MonoBehaviour {
 	void Start () {
 		itemGenerator = ItemGeneratorController.instance;
 		timeTracker = TimeTracker.instance;
+		pointSystem = PointSystem.instance;
 		tileSlots = new List<TileSlot>(slotsParent.GetComponentsInChildren<TileSlot>());
 	}
 	
@@ -37,5 +40,6 @@ public class SpecialActions : MonoBehaviour {
 		foreach(TileItem item in tileItems){
 			item.ClearItem();
 		}
+		pointSystem.IncreaseMultiplier();
 	}
 }

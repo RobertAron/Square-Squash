@@ -1,16 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PointSystem : MonoBehaviour
 {
   [SerializeField]
   ScoreDisplay scoreDisplay;
   [SerializeField]
+  MultiplierRadial multiplierRadial;
+  [SerializeField]
+  MultiplierText multiplierText;
+  [SerializeField]
   int itemsCleared = 0;
   TimeTracker timeTracker;
+  int currentMultiplier = 1;
+  float baseMultiplierTime = 100;
+  float currentMultiplierTime = float.PositiveInfinity;
+  float maxMultiplierTime = float.PositiveInfinity;
+
 
 	#region  Singleton
+  
+  
   public static PointSystem instance;
   private void Awake()
   {
@@ -18,7 +30,7 @@ public class PointSystem : MonoBehaviour
     {
       instance = this;
     }
-    if(scoreDisplay==null) throw new System.Exception("Point system is missing score display object.");
+    if(scoreDisplay==null||multiplierRadial==null||multiplierText==null) throw new System.Exception("Point system is missing score display object.");
   }
 	#endregion
 
@@ -29,9 +41,33 @@ public class PointSystem : MonoBehaviour
 
   public void AddPoint()
   {
-    itemsCleared += 1;
+    itemsCleared += 1*currentMultiplier;
     timeTracker.IncreaseRemainingTime(0.01f);
     scoreDisplay.UpdateScore(itemsCleared);
   }
 
+  private void FixedUpdate() {
+    currentMultiplierTime -= Time.fixedDeltaTime;
+    if(currentMultiplierTime<0){
+      currentMultiplier -= 1;
+      UpdateMultiplierTime();
+    }
+    multiplierRadial.SetFillAmount(currentMultiplierTime/maxMultiplierTime);
+  }
+  
+  void UpdateMultiplierTime(){
+    if(currentMultiplier==1) {
+      currentMultiplierTime =  float.PositiveInfinity;
+    }
+    else {
+      currentMultiplierTime = 15 - currentMultiplier;
+    }
+    maxMultiplierTime = currentMultiplierTime;
+    multiplierText.SetMultiplierText(currentMultiplier);
+  }
+
+  public void IncreaseMultiplier(){
+    currentMultiplier+=1;
+    UpdateMultiplierTime();
+  }
 }

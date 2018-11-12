@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameOverController : MonoBehaviour {
 
@@ -21,6 +22,7 @@ public class GameOverController : MonoBehaviour {
   bool isGameOver = false;
   private void Start() {
     timeTracker = TimeTracker.instance;
+    if(gameOverScreen==null) throw new System.Exception("Game Over Controller Missing UI Components");
   }
 
 	public void EndGame()
