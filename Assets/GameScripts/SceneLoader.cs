@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuSceneLoader : MonoBehaviour {
-
-	public string otherSceneName;
+public class SceneLoader : MonoBehaviour {
+	public Object sceneToLoad;
 	public void ChangeChangeScene(){
-		SceneManager.LoadScene(otherSceneName);
+		SceneManager.LoadScene(sceneToLoad.name);
 	}
 }
