@@ -16,14 +16,15 @@ public class TimeTracker : MonoBehaviour
   }
   #endregion
 
-  [SerializeField]
-  float timeRemaining = 300;
   GameOverController gameOverController;
+  float timeRemaining;
   bool runTimer = true;
+  public float timePerLevel = 10;
 
   private void Start()
   {
     gameOverController = GameOverController.instance;
+    timeRemaining = timePerLevel * PlayerPrefs.GetInt(PrefKeys.playerLevel);
   }
 
 

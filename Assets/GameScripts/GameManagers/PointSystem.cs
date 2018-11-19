@@ -12,10 +12,9 @@ public class PointSystem : MonoBehaviour
   [SerializeField]
   MultiplierText multiplierText;
   [SerializeField]
-  int itemsCleared = 0;
+  int pointValue = 0;
   TimeTracker timeTracker;
   int currentMultiplier = 1;
-  float baseMultiplierTime = 100;
   float currentMultiplierTime = float.PositiveInfinity;
   float maxMultiplierTime = float.PositiveInfinity;
 
@@ -36,14 +35,14 @@ public class PointSystem : MonoBehaviour
 
   private void Start() {
     timeTracker = TimeTracker.instance;
-    scoreDisplay.UpdateScore(itemsCleared);
+    scoreDisplay.UpdateScore(pointValue);
   }
 
   public void AddPoint()
   {
-    itemsCleared += 1*currentMultiplier;
+    pointValue += 1*currentMultiplier;
     timeTracker.IncreaseRemainingTime(0.01f);
-    scoreDisplay.UpdateScore(itemsCleared);
+    scoreDisplay.UpdateScore(pointValue);
   }
 
   private void FixedUpdate() {
@@ -69,5 +68,9 @@ public class PointSystem : MonoBehaviour
   public void IncreaseMultiplier(){
     currentMultiplier+=1;
     UpdateMultiplierTime();
+  }
+
+  public int GetCurrentPoints(){
+    return pointValue;
   }
 }
