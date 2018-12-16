@@ -20,7 +20,10 @@ public class GameOverController : MonoBehaviour
 
   TimeTracker timeTracker;
   PointSystem pointsSystem;
-  public GameObject gameOverScreen;
+  [SerializeField] GameObject gameOverScreen;
+  [SerializeField] LevelUpAnimator levelUpAnimator;
+
+
   bool isGameOver = false;
   private void Start()
   {
@@ -34,7 +37,11 @@ public class GameOverController : MonoBehaviour
   {
     timeTracker.SetTimerRunning(false);
     gameOverScreen.SetActive(true);
-    UpdatePlayerExp(pointsSystem.GetCurrentPoints());
+    int pointsEarned = pointsSystem.GetCurrentPoints();
+    int currentLevel = PlayerPrefs.GetInt(PrefKeys.playerLevel);
+    int currentExp = PlayerPrefs.GetInt(PrefKeys.playerExp);;
+    levelUpAnimator.LevelUpAnimation(currentLevel,currentExp,pointsSystem.GetCurrentPoints());
+    UpdatePlayerExp(pointsEarned);
     isGameOver = true;
   }
 

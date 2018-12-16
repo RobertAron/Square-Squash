@@ -18,7 +18,6 @@ public class MainMenuGameState : MonoBehaviour
     }
 		playerLevel = PlayerPrefs.GetInt(PrefKeys.playerLevel, 1);
     playerExp = PlayerPrefs.GetInt(PrefKeys.playerExp, 0);
-    Debug.Log("main menu game state awake");
   }
 
   #endregion

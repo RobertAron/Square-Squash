@@ -27,12 +27,14 @@ public class TileSlotGenerator : MonoBehaviour
 
   private TileSlot[,] CreateTileArray()
   {
+    float xOrigin = tileAmount.columns*0.5f*-1f+0.5f;
+    float yOrigin = (tileAmount.rows-1)*0.5f*-1f+0.5f;
     TileSlot[,] tiles = new TileSlot[tileAmount.columns, tileAmount.rows];
     for (int x = 0; x < tileAmount.columns; x++)
     {
       for (int y = 0; y < tileAmount.rows; y++)
       {
-        GameObject tileSlotGameObject = Instantiate(tileSlotPrefab, new Vector3(x, y, 0), Quaternion.identity, transform);
+        GameObject tileSlotGameObject = Instantiate(tileSlotPrefab, new Vector3(xOrigin+x, yOrigin+y, 0), Quaternion.identity, transform);
         tileSlotGameObject.name = "Tile Slot " + x + " " + y;
         tiles[x, y] = tileSlotGameObject.GetComponent<TileSlot>();
       }

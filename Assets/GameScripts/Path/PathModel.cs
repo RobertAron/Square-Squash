@@ -15,6 +15,7 @@ public class PathModel : MonoBehaviour
     if (itemType == ColorPalette.None) return;
     path.Add(initialSlot);
     pathColor = itemType;
+    AndroidVibrate.Vibrate(40);
   }
   public void AttemptAddPath(TileSlot newTile)
   {
@@ -32,6 +33,7 @@ public class PathModel : MonoBehaviour
     if (lastSlot == newTile && path.Count > 1)
     {
       path.RemoveAt(path.Count - 1);
+      AndroidVibrate.Vibrate(40);
       return;
     }
 
@@ -40,6 +42,7 @@ public class PathModel : MonoBehaviour
     // Check if the new tile is adjacent our current one.
     if (!lastSlot.adjacentTiles.Contains(newTile)) return;
     path.Add(newTile);
+    AndroidVibrate.Vibrate(40);
   }
   public void PathReset()
   {
