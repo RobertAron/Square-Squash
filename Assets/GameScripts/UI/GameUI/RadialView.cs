@@ -22,6 +22,8 @@ public class RadialView : MonoBehaviour {
 		Dictionary<ColorPalette, float> cooldownValues = itemGeneratorController.GetCooldownValues();
 		List<ColorPalette> colorsInGenerator = new List<ColorPalette>(cooldownValues.Keys);
 		List<ColorPalette> colorsInRadials = new List<ColorPalette>(colorRadials.Keys);
+		colorsInGenerator.Remove(ColorPalette.All);
+		colorsInRadials.Remove(ColorPalette.All);
 		foreach(ColorPalette color in colorsInGenerator){
 			if(!colorRadials.ContainsKey(color))
 			{
