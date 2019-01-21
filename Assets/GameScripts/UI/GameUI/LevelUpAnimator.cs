@@ -19,15 +19,20 @@ public class LevelUpAnimator : MonoBehaviour {
 		int totalExpToLevel = StaticCalcs.experienceToLevel(startingLevel);
 		int diffPerFrame = expGained/60;
 		while(expRemaining>0){
+			// Level Up Conditional
+			if(expCurrent==totalExpToLevel){
+				currentLevel += 1;
+				totalExpToLevel = StaticCalcs.experienceToLevel(currentLevel);
+				expCurrent = 0;
+			}
 			int expTillLevelUp = totalExpToLevel-expCurrent;
 			int expThisFrame = Mathf.Min(expTillLevelUp,diffPerFrame,expRemaining);
 			expRemaining -= expThisFrame;
 			expCurrent += expThisFrame;
-
 			levelText.text = currentLevel.ToString();
 			expText.text = expCurrent+"/"+totalExpToLevel;
 			expRaidal.fillAmount = (float)expCurrent/(float)totalExpToLevel;
-			yield return new WaitForFixedUpdate(); 
+			yield return new WaitForFixedUpdate();
 		}
 	}
 }
