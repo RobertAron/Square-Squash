@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095725151161406}
   - component: {fileID: 114853239196310404}
+  - component: {fileID: 114797611718746438}
   m_Layer: 0
   m_Name: BasicPink
   m_TagString: Untagged
@@ -186,6 +187,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442072373607546}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114797611718746438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747191242035554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7081ec270e7b824c9eef2f96287c75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.75
 --- !u!114 &114853239196310404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,5 +210,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d678d959d755a4c4f892e14a1d2cc319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotColor: 0
-  acceleration: 20
+  itemColor: 0

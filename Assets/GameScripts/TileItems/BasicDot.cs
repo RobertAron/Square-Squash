@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+[RequireComponent(typeof(SpringyMove))]
 public class BasicDot : TileItem
 {
   float acceleration = 20f;
-  private Coroutine currentCoroutine;
   private PointSystem pointSystem;
+  private SpringyMove springyMove;
 
   private void Awake() {
     GameObject child = transform.GetChild(0).gameObject;
     child.GetComponent<Renderer>().material.color =  ColorSchema.GetColor(itemColor);
+    springyMove = GetComponent<SpringyMove>();
   }
   private void Start() {
     pointSystem = PointSystem.instance;
@@ -39,11 +40,7 @@ public class BasicDot : TileItem
   }
 
   public override void SetTileSlot(TileSlot tileSlot){
-    base.SetTileSlot(tileSlot);
-    if(currentCoroutine!=null){
-      StopCoroutine(currentCoroutine);
-    }
-    currentCoroutine = StartCoroutine(MoveToNewSlot(tileSlot));
+    springyMove.startMove(tileSlot.transform.position);
   }
 
   IEnumerator MoveToNewSlot(TileSlot tileSlot){

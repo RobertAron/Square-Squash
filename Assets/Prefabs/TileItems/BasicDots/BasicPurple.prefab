@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4030841170906248}
   - component: {fileID: 114550891658805790}
+  - component: {fileID: 114972365069898904}
   m_Layer: 0
   m_Name: BasicPurple
   m_TagString: Untagged
@@ -198,4 +199,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemColor: 5
-  acceleration: 20
+--- !u!114 &114972365069898904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1732765432991810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7081ec270e7b824c9eef2f96287c75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.75
