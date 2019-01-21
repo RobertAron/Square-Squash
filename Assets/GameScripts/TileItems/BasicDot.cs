@@ -28,6 +28,7 @@ public class BasicDot : TileItem
   public override void ClearItem()
   {
     pointSystem.AddPoint();
+    Debug.Log(tileSlot);
     tileSlot.ObtainNewTileItem();
 		Destroy(this.gameObject);
   }
@@ -40,6 +41,7 @@ public class BasicDot : TileItem
   }
 
   public override void SetTileSlot(TileSlot tileSlot){
+    base.SetTileSlot(tileSlot);
     springyMove.startMove(tileSlot.transform.position);
   }
 
