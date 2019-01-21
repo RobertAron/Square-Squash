@@ -7,7 +7,7 @@ using UnityEngine;
 public class PathController : MonoBehaviour
 {
   PathModel pathModel;
-  TileSlot lastPressed = null;
+  TileSlot lastHoverHeld = null;
   SpecialActions specialActions;
 
 
@@ -20,22 +20,24 @@ public class PathController : MonoBehaviour
   public void InitialPress(Vector3 pressLocation)
   {
     TileSlot tileSlot = RaycastForTileSlot(pressLocation);
-    if(tileSlot==null) return;
-    lastPressed = tileSlot;
+    if(tileSlot==null || tileSlot.GetItemType() == ColorPalette.All || tileSlot.GetItemType() == ColorPalette.None) return;
+    lastHoverHeld = tileSlot;
     pathModel.SetInitialSlot(tileSlot);
   }
   public void OnHeld(Vector3 pressLocation)
   {
     TileSlot tileSlot = RaycastForTileSlot(pressLocation);
-    if(lastPressed==tileSlot) return;
-    lastPressed = tileSlot;
+    if(lastHoverHeld==tileSlot) return;
+    lastHoverHeld = tileSlot;
     if(tileSlot==null) return;
     pathModel.AttemptAddPath(tileSlot);
   }
   public void OnRelease()
   {
-    if(pathModel.ContainsLoop())
+    if(pathModel.ContainsLoop()){
 			specialActions.ClearAllColor(pathModel.GetPathColor());
+      specialActions.ClearAllColor(ColorPalette.All);
+    }
     else if (pathModel.ContainsLongPath())
 			pathModel.ClearPathItems();
     pathModel.PathReset();

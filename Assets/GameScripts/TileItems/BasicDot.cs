@@ -27,8 +27,7 @@ public class BasicDot : TileItem
 
   public override void ClearItem()
   {
-    pointSystem.AddPoint();
-    Debug.Log(tileSlot);
+    if(pointSystem!=null) pointSystem.AddPoint();
     tileSlot.ObtainNewTileItem();
 		Destroy(this.gameObject);
   }
