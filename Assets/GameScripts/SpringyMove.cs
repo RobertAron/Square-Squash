@@ -20,19 +20,31 @@ public class SpringyMove : MonoBehaviour
 		bool extraMove = false;
 		Vector3 startPosition = transform.position;
 		while(currentPosition<1 && !extraMove){
-			if(currentPosition>1) extraMove = true;
+			if(currentPosition>=1) extraMove = true;
 			currentPosition += Time.deltaTime*speed;
 			transform.position = Berp(startPosition,finalPosition,currentPosition);
 			yield return new WaitForFixedUpdate();
 		}
-	}
 
+	}
+  // TODO: update 'boing' to linear
   //Boing
   public static float Berp(float start, float end, float value)
   {
     value = Mathf.Clamp01(value);
     value = (Mathf.Sin(value * Mathf.PI * (0.2f + 2.5f * value * value * value)) * Mathf.Pow(1f - value, 2.2f) + value) * (1f + (1.2f * (1f - value)));
-    return start + (end - start) * value;
+    float output = start + (end - start) * value;
+    // TODO: make this code more clean
+    // Force bounce instead of spring
+    if(output<end&&end<start){
+      float pastEnd = output-end;
+      output = end-pastEnd;
+    }
+    else if(output>end&&end>start){
+      float pastEnd = end-output;
+      output = end+pastEnd;
+    }
+    return output;
   }
   public static Vector2 Berp(Vector2 start, Vector2 end, float value)
   {

@@ -42,7 +42,8 @@ public class PathModel : MonoBehaviour
     // Check if the new tile is adjacent our current one.
     if (!lastSlot.adjacentTiles.Contains(newTile)) return;
     path.Add(newTile);
-    AndroidVibrate.Vibrate(40);
+    if(ContainsLoop()) AndroidVibrate.Vibrate(new long []{0,40,40,40},-1);
+    else AndroidVibrate.Vibrate(40);
   }
   public void PathReset()
   {
