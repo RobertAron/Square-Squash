@@ -30,13 +30,25 @@ public class SpecialActions : MonoBehaviour {
 	public void ClearAllColor(ColorPalette color){
 		timeTracker.IncreaseRemainingTime(1.0f);
 		itemGenerator.PreventColorSpawn(color);
+		List<TileItem> tileItems = GetAllColor(color);
+		foreach(TileItem item in tileItems){
+			item.ClearItem();
+		}
+	}
+	
+	List<TileItem> GetAllColor(ColorPalette color){
 		List<TileItem> tileItems = new List<TileItem>();
 		foreach(TileSlot tileSlot in tileSlots){
 			TileItem item = tileSlot.GetItem();
 			if(item.itemColor==color) tileItems.Add(item);
 		}
-		foreach(TileItem item in tileItems){
-			item.ClearItem();
+		return tileItems;
+	}
+
+	public void EmphasizeColor(ColorPalette color){
+		List<TileItem> items = GetAllColor(color);
+		foreach(TileItem tileItem in items){
+			tileItem.EmphasizeItem();
 		}
 	}
 }

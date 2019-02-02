@@ -7,6 +7,11 @@ public class PathModel : MonoBehaviour
   [SerializeField]
   public List<TileSlot> path = new List<TileSlot>();
   private ColorPalette pathColor = ColorPalette.None;
+  private SpecialActions specialActions;
+
+  private void Start() {
+    specialActions = SpecialActions.instance;
+  }
 
   public void SetInitialSlot(TileSlot initialSlot)
   {
@@ -42,7 +47,10 @@ public class PathModel : MonoBehaviour
     // Check if the new tile is adjacent our current one.
     if (!lastSlot.adjacentTiles.Contains(newTile)) return;
     path.Add(newTile);
-    if(ContainsLoop()) AndroidVibrate.Vibrate(new long []{0,40,20,40},-1);
+    if(ContainsLoop()) {
+      specialActions.EmphasizeColor(pathColor);
+      AndroidVibrate.Vibrate(new long []{0,40,20,40},-1);
+    }
     // if(ContainsLoop()) AndroidVibrate.Vibrate(70);
     else AndroidVibrate.Vibrate(30);
   }

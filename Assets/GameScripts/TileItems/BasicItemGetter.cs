@@ -37,4 +37,9 @@ public class BasicItemGetter : TileItem
   {
     dotsSpawned = 0;
   }
+
+  public override void EmphasizeItem()
+  {
+    // Item getters don't need to be emphaised
+  }
 }

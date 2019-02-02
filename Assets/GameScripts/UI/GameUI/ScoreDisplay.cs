@@ -21,12 +21,20 @@ public class ScoreDisplay : MonoBehaviour {
     currentCoroutine = StartCoroutine(UpdateAnimation((float)newScore));
 	}
 
+	public void HardSet(int newScore){
+		SetScoreTet(newScore);
+	}
+
 	IEnumerator UpdateAnimation(float updateTo){
 		speed = (updateTo-currentScore)*5;
 		while(currentScore!=updateTo){
 			currentScore = Mathf.MoveTowards(currentScore,updateTo,speed*Time.deltaTime);
-			textComonent.text = "Score: " + Mathf.Floor(currentScore);
+			SetScoreTet((int)Mathf.Floor(currentScore));
 			yield return null;
 		}
+	}
+
+	void SetScoreTet(int scoreValue){
+		textComonent.text = "Score: " + scoreValue;
 	}
 }

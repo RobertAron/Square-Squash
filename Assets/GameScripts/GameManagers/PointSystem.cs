@@ -35,7 +35,7 @@ public class PointSystem : MonoBehaviour
 
   private void Start() {
     timeTracker = TimeTracker.instance;
-    scoreDisplay.UpdateScore(pointValue);
+    scoreDisplay.HardSet(pointValue);
   }
 
   public void AddPoint()
