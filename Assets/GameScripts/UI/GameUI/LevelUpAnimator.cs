@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class LevelUpAnimator : MonoBehaviour {
 	[SerializeField] Text levelText;
@@ -13,26 +14,35 @@ public class LevelUpAnimator : MonoBehaviour {
 	}
 
 	IEnumerator LevelUpAnimationCoroutine(int startingLevel,int startingExp,int expGained){
-		int expRemaining = expGained;
-		int expCurrent = startingExp;
+		float expRemaining = expGained;
+		float expCurrent = startingExp;
 		int currentLevel = startingLevel;
-		int totalExpToLevel = StaticCalcs.experienceToLevel(startingLevel);
-		int diffPerFrame = expGained/60;
+		float totalExpToLevel = StaticCalcs.experienceToLevel(startingLevel);
+		float accPerFrame = expGained/300f;
+		float diffPerFrame = 0;
+		SetEXPText(currentLevel,expCurrent,totalExpToLevel);
+		yield return new WaitForSeconds(1);
 		while(expRemaining>0){
 			// Level Up Conditional
+			diffPerFrame += accPerFrame;
+			Debug.Log(diffPerFrame);
 			if(expCurrent==totalExpToLevel){
 				currentLevel += 1;
 				totalExpToLevel = StaticCalcs.experienceToLevel(currentLevel);
 				expCurrent = 0;
 			}
-			int expTillLevelUp = totalExpToLevel-expCurrent;
-			int expThisFrame = Mathf.Min(expTillLevelUp,diffPerFrame,expRemaining);
+			float expTillLevelUp = totalExpToLevel-expCurrent;
+			float expThisFrame = Mathf.Min(expTillLevelUp,diffPerFrame,expRemaining);
 			expRemaining -= expThisFrame;
 			expCurrent += expThisFrame;
-			levelText.text = currentLevel.ToString();
-			expText.text = expCurrent+"/"+totalExpToLevel;
-			expRaidal.fillAmount = (float)expCurrent/(float)totalExpToLevel;
+			SetEXPText(currentLevel,expCurrent,totalExpToLevel);
 			yield return new WaitForFixedUpdate();
 		}
+	}
+
+	void SetEXPText(float currentLevel,float expCurrent,float totalExpToLevel){
+			expText.text = Math.Floor(expCurrent)+"/"+totalExpToLevel;
+			expRaidal.fillAmount = expCurrent/totalExpToLevel;
+			levelText.text =currentLevel.ToString();
 	}
 }
