@@ -4,8 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpringyMove))]
 public class SpringOnStart : MonoBehaviour {
-	[SerializeField]
-	float offsetX=0,offsetY=0,offsetZ=0;
 
 	SpringyMove springyMove;
 	private void Awake() {
@@ -14,8 +12,9 @@ public class SpringOnStart : MonoBehaviour {
 
   void Start()
   {
+		var rectTransform = transform.parent.GetComponent<RectTransform>();
 		Vector3 getTo = transform.position;
-		transform.position = new Vector3(transform.position.x+offsetX,transform.position.y+offsetY,transform.position.z+offsetZ);
+		transform.position = new Vector3(transform.position.x,transform.position.y+rectTransform.sizeDelta.y/1.5f,transform.position.z);
 		springyMove.startMove(getTo); 
   }
 }
