@@ -16,16 +16,11 @@ public class MultiplierText : MonoBehaviour {
 	private void Start() {
 		text = GetComponent<Text>();
 		springyMove = GetComponent<SpringyMove>();
-		var selfRect = GetComponent<RectTransform>();
-		// float width = parentRect.sizeDelta.x;
-		// float height = parentRect.sizeDelta.y;
 		float width = Screen.width;
 		float height = Screen.height;
 		startPos = transform.position;
 		topPoint = new Vector3(width/2,height*1.25f,transform.position.z);
-		Debug.Log(topPoint);
 		centerPoint = new Vector3(width/2,height/2,transform.position.z);
-		Debug.Log(centerPoint);
 	}
 
 	[ContextMenu("Test Move")]

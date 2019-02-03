@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(SpringyMove),typeof(ParticleSystem))]
+[RequireComponent(typeof(SpringyMove))]
 public class BasicDot : TileItem
 {
   float acceleration = 20f;
   private PointSystem pointSystem;
   private SpringyMove springyMove;
-  private ParticleSystem ps;
+  private ParticleSystem[] ps;
 
   private void Awake() {
+    ps = GetComponentsInChildren<ParticleSystem>();
     GameObject child = transform.GetChild(0).gameObject;
     Color color = ColorSchema.GetColor(itemColor);
     child.GetComponent<Renderer>().material.color =  color;
     springyMove = GetComponent<SpringyMove>();
-    ps = GetComponent<ParticleSystem>();
-    var col = ps.colorOverLifetime;
+    var col = ps[0].colorOverLifetime;
     Gradient grad = new Gradient();
     grad.SetKeys(new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(1.0f, 0.1f),new GradientAlphaKey(1.0f, 0.7f), new GradientAlphaKey(0.0f, 1.0f) } );
     col.color = grad;
@@ -64,8 +64,11 @@ public class BasicDot : TileItem
     transform.position = targetLocation;
   }
 
+  [ContextMenu("emphsize item")]
   public override void EmphasizeItem()
   {
-    ps.Emit(1);
+    for(int i=0;i<ps.Length;i++){
+      ps[i].Emit(1);
+    }
   }
 }
