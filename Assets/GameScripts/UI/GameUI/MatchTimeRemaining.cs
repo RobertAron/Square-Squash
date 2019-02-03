@@ -18,13 +18,9 @@ public class MatchTimeRemaining : MonoBehaviour
   private void Update()
   {
     TimeSpan timeSpan = TimeSpan.FromSeconds(timeTracker.GetTimeRemaining());
-    int minutes = timeSpan.Minutes;
-    int seconds = timeSpan.Seconds;
-    int ms = timeSpan.Milliseconds;
-    // timeText.text = minutes + ":" + seconds + ":" + ms;
-    timeText.text = String.Format ("{0:00}:{1:00}:{2:00}", 
-																	timeSpan.Minutes, 
-																	timeSpan.Seconds, 
-																	timeSpan.Milliseconds);
+    timeText.text = String.Format("{0:0}:{1:00}:{2:D2}",
+                                  timeSpan.Minutes,
+                                  timeSpan.Seconds,
+                                  timeSpan.Milliseconds / 10);
   }
 }
