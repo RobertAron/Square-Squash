@@ -1097,7 +1097,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -583.3333}
-  m_SizeDelta: {x: 600.00006, y: 133.33333}
+  m_SizeDelta: {x: 600, y: 133.33333}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1954634762
 GameObject:
@@ -1208,7 +1208,7 @@ Prefab:
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 400.00003
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}
@@ -1218,7 +1218,7 @@ Prefab:
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 600.00006
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}

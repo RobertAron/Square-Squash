@@ -13,14 +13,10 @@ public class BasicDot : TileItem
 
   private void Awake() {
     ps = GetComponentsInChildren<ParticleSystem>();
-    GameObject child = transform.GetChild(0).gameObject;
-    Color color = ColorSchema.GetColor(itemColor);
-    child.GetComponent<Renderer>().material.color =  color;
     springyMove = GetComponent<SpringyMove>();
-    var col = ps[0].colorOverLifetime;
-    Gradient grad = new Gradient();
-    grad.SetKeys(new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(1.0f, 0.1f),new GradientAlphaKey(1.0f, 0.7f), new GradientAlphaKey(0.0f, 1.0f) } );
-    col.color = grad;
+    Color color = ColorSchema.GetColor(itemColor);
+    GameObject child = transform.GetChild(0).gameObject;
+    child.GetComponent<Renderer>().material.color =  color;
     
   }
   private void Start() {
@@ -70,5 +66,16 @@ public class BasicDot : TileItem
     for(int i=0;i<ps.Length;i++){
       ps[i].Emit(1);
     }
+  }
+
+  [ContextMenu("set particle coloring")]
+  public void SetParticleColor(){
+    ps = GetComponentsInChildren<ParticleSystem>();
+    GameObject child = transform.GetChild(0).gameObject;
+    Color color = ColorSchema.GetColor(itemColor);
+    var col = ps[0].colorOverLifetime;
+    Gradient grad = new Gradient();
+    grad.SetKeys(new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(1.0f, 0.1f),new GradientAlphaKey(1.0f, 0.7f), new GradientAlphaKey(0.0f, 1.0f) } );
+    col.color = grad;
   }
 }
