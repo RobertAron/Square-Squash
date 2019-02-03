@@ -26,6 +26,7 @@ public class LevelUpAnimator : MonoBehaviour {
 			// Level Up Conditional
 			diffPerFrame += accPerFrame;
 			if(expCurrent==totalExpToLevel){
+				diffPerFrame = 0;
 				currentLevel += 1;
 				totalExpToLevel = StaticCalcs.experienceToLevel(currentLevel);
 				expCurrent = 0;

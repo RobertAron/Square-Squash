@@ -19,7 +19,7 @@ public class BasicDot : TileItem
     ps = GetComponent<ParticleSystem>();
     var col = ps.colorOverLifetime;
     Gradient grad = new Gradient();
-    grad.SetKeys(new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(1.0f, 0.1f),new GradientAlphaKey(0.7f, 0.5f), new GradientAlphaKey(0.0f, 1.0f) } );
+    grad.SetKeys(new GradientColorKey[] { new GradientColorKey(color, 0.0f), new GradientColorKey(color, 1.0f) }, new GradientAlphaKey[] { new GradientAlphaKey(0.0f, 0.0f), new GradientAlphaKey(1.0f, 0.1f),new GradientAlphaKey(1.0f, 0.7f), new GradientAlphaKey(0.0f, 1.0f) } );
     col.color = grad;
     
   }
@@ -49,7 +49,7 @@ public class BasicDot : TileItem
 
   public override void SetTileSlot(TileSlot tileSlot){
     base.SetTileSlot(tileSlot);
-    springyMove.startMove(tileSlot.transform.position);
+    springyMove.StartMove(tileSlot.transform.position);
   }
 
   IEnumerator MoveToNewSlot(TileSlot tileSlot){

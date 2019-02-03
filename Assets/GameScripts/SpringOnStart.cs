@@ -12,9 +12,8 @@ public class SpringOnStart : MonoBehaviour {
 
   void Start()
   {
-		var rectTransform = transform.parent.GetComponent<RectTransform>();
 		Vector3 getTo = transform.position;
-		transform.position = new Vector3(transform.position.x,transform.position.y+rectTransform.sizeDelta.y/1.5f,transform.position.z);
-		springyMove.startMove(getTo); 
+		transform.position = new Vector3(transform.position.x,Screen.height,Screen.width);
+		springyMove.StartMove(getTo); 
   }
 }

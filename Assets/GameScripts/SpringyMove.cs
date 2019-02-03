@@ -11,7 +11,7 @@ public class SpringyMove : MonoBehaviour
   float currentSpeed = 0;
   private Coroutine currentCoroutine;
 
-  public void startMove(Vector3 finalPosition){
+  public void StartMove(Vector3 finalPosition){
     if(currentCoroutine!=null){
       StopCoroutine(currentCoroutine);
     }
