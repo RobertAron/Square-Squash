@@ -12,13 +12,16 @@ public class PathModel : MonoBehaviour
   private void Start() {
     specialActions = SpecialActions.instance;
   }
-
+  void AddToPath(TileSlot slot){
+    path.Add(slot);
+    slot.GetItem().EmphasizeItem();
+  }
   public void SetInitialSlot(TileSlot initialSlot)
   {
     ColorPalette itemType = initialSlot.GetItemType();
     path.Clear();
     if (itemType == ColorPalette.None) return;
-    path.Add(initialSlot);
+    AddToPath(initialSlot);
     pathColor = itemType;
     AndroidVibrate.Vibrate(40);
   }
@@ -46,7 +49,7 @@ public class PathModel : MonoBehaviour
     if (ContainsLoop()) return;
     // Check if the new tile is adjacent our current one.
     if (!lastSlot.adjacentTiles.Contains(newTile)) return;
-    path.Add(newTile);
+    AddToPath(newTile);
     if(ContainsLoop()) {
       specialActions.EmphasizeColor(pathColor);
       AndroidVibrate.Vibrate(new long []{0,40,20,40},-1);
