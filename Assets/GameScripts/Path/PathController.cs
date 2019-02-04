@@ -46,7 +46,7 @@ public class PathController : MonoBehaviour
   {
     RaycastHit hit;
     Ray ray = Camera.main.ScreenPointToRay(location);
-    Physics.Raycast(ray, out hit, 100.0f);
+    Physics.Raycast(ray, out hit, 200.0f);
     if(hit.transform==null) return null;
     return hit.transform.GetComponent<TileSlot>();
   }

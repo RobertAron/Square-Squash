@@ -16,11 +16,10 @@ public class MultiplierText : MonoBehaviour {
 	private void Start() {
 		text = GetComponent<Text>();
 		springyMove = GetComponent<SpringyMove>();
-		float width = Screen.width;
-		float height = Screen.height;
 		startPos = transform.position;
-		topPoint = new Vector3(width/2,height*1.25f,transform.position.z);
-		centerPoint = new Vector3(width/2,height/2,transform.position.z);
+		// centerPoint = new Vector3(width/2,height/2,transform.position.z);
+		Vector3 centerPoint = parentRect.localPosition;
+		topPoint = new Vector3(centerPoint.x,centerPoint.y+10f,transform.position.z);
 	}
 
 	[ContextMenu("Test Move")]

@@ -24,7 +24,7 @@ public class SpringyMove : MonoBehaviour
 		while(bouncesLeft>=0){
       currentSpeed += acceleration * Time.fixedDeltaTime;
 			transform.position = Vector3.MoveTowards(transform.position,finalPosition,currentSpeed);
-      if(transform.position.Equals(finalPosition)){
+      if(transform.position==finalPosition){
         currentSpeed /= 6;
         transform.position = Vector3.MoveTowards(transform.position,startPostion,currentSpeed);
         bouncesLeft-=1;
