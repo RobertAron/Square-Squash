@@ -15,15 +15,15 @@ public class InputCapture : MonoBehaviour
     public InputPositionEvent onInitialPress = new InputPositionEvent();
     public InputEvent onRelease = new InputEvent();
     public InputPositionEvent onHeld = new InputPositionEvent();
-    GameOverController gameOverController;
+    MetaGameStateController gameOverController;
 
     private void Start() {
-        gameOverController = GameOverController.instance;
+        gameOverController = MetaGameStateController.instance;
     }
 
     void Update()
     {
-        if(!gameOverController.IsGameOver())
+        if(!gameOverController.IsGamePaused())
         {
             if(Input.GetMouseButtonDown(0)) onInitialPress.Invoke(Input.mousePosition);
             if(Input.GetMouseButton(0) && !Input.GetMouseButtonDown(0)) onHeld.Invoke(Input.mousePosition);

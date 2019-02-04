@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
-public class GameOverController : MonoBehaviour
+public class MetaGameStateController : MonoBehaviour
 {
 
   #region  Singleton
-  public static GameOverController instance;
+  public static MetaGameStateController instance;
   private void Awake()
   {
     if (instance == null)
@@ -17,37 +18,35 @@ public class GameOverController : MonoBehaviour
   }
 
   #endregion
-
-  TimeTracker timeTracker;
   PointSystem pointsSystem;
   [SerializeField] GameObject gameOverScreen;
   [SerializeField] LevelUpAnimator levelUpAnimator;
+  [SerializeField] Button pauseButton;
 
-
-  bool isGameOver = false;
+  bool isGamePaused = false;
   private void Start()
   {
-    timeTracker = TimeTracker.instance;
     if (gameOverScreen == null) throw new System.Exception("Game Over Controller Missing UI Components");
     pointsSystem = PointSystem.instance;
     if (pointsSystem == null) throw new System.Exception("Game Over Controller unable to reference Points System");
+    if (pauseButton == null) throw new System.Exception("Game Over Controller unable to reference Pause Button");
   }
 
   public void EndGame()
   {
-    timeTracker.SetTimerRunning(false);
+    pauseButton.interactable = false;
     gameOverScreen.SetActive(true);
     int pointsEarned = pointsSystem.GetCurrentPoints();
     int currentLevel = PlayerPrefs.GetInt(PrefKeys.playerLevel);
     int currentExp = PlayerPrefs.GetInt(PrefKeys.playerExp);;
     levelUpAnimator.LevelUpAnimation(currentLevel,currentExp,pointsSystem.GetCurrentPoints());
     UpdatePlayerExp(pointsEarned);
-    isGameOver = true;
+    isGamePaused = true;
   }
 
-  public bool IsGameOver()
+  public bool IsGamePaused()
   {
-    return isGameOver;
+    return isGamePaused;
   }
 
   void UpdatePlayerExp(int expGained)
@@ -68,5 +67,8 @@ public class GameOverController : MonoBehaviour
       PlayerPrefs.SetInt(PrefKeys.playerExp, expAfter);
       PlayerPrefs.Save();
     }
+  }
+  public void PauseToggle(){
+    isGamePaused = !isGamePaused;
   }
 }

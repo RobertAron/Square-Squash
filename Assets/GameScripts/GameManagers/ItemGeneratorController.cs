@@ -18,11 +18,11 @@ public class ItemGeneratorController : MonoBehaviour
   #endregion
 
   PointSystem pointSystem;
-  GameOverController gameOverController;
+  MetaGameStateController gameOverController;
 
   private void Start() {
     pointSystem = PointSystem.instance;
-    gameOverController = GameOverController.instance;
+    gameOverController = MetaGameStateController.instance;
   }
 
   public TileItem[] possibleItems;
@@ -54,7 +54,7 @@ public class ItemGeneratorController : MonoBehaviour
 
   private void FixedUpdate()
   {
-    if(!gameOverController.IsGameOver()){
+    if(!gameOverController.IsGamePaused()){
       List<ColorPalette> colors = new List<ColorPalette>(colorCooldowns.Keys);
       foreach (ColorPalette color in colors)
       {

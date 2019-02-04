@@ -17,8 +17,7 @@ public class MultiplierText : MonoBehaviour {
 		text = GetComponent<Text>();
 		springyMove = GetComponent<SpringyMove>();
 		startPos = transform.position;
-		// centerPoint = new Vector3(width/2,height/2,transform.position.z);
-		Vector3 centerPoint = parentRect.localPosition;
+		centerPoint = parentRect.localPosition;
 		topPoint = new Vector3(centerPoint.x,centerPoint.y+10f,transform.position.z);
 	}
 

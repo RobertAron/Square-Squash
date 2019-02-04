@@ -16,34 +16,27 @@ public class TimeTracker : MonoBehaviour
   }
   #endregion
 
-  GameOverController gameOverController;
+  MetaGameStateController metaGameStateController;
   float timeRemaining;
-  bool runTimer = true;
   public float timePerLevel = 10;
 
   private void Start()
   {
-    gameOverController = GameOverController.instance;
+    metaGameStateController = MetaGameStateController.instance;
     timeRemaining = timePerLevel * PlayerPrefs.GetInt(PrefKeys.playerLevel);
   }
 
 
   void FixedUpdate()
   {
-    if (runTimer)
-      UpdateTimer();
-  }
-
-  void UpdateTimer()
-  {
-    if (timeRemaining > 0)
+    if(timeRemaining < 0)
     {
-      if (runTimer) timeRemaining -= Time.fixedDeltaTime;
-    }
-    else
-    {
-      gameOverController.EndGame();
+      metaGameStateController.EndGame();
       timeRemaining = 0;
+    }
+    else if (!metaGameStateController.IsGamePaused())
+    {
+      timeRemaining -= Time.fixedDeltaTime;
     }
   }
 
@@ -54,9 +47,5 @@ public class TimeTracker : MonoBehaviour
   public float GetTimeRemaining()
   {
     return timeRemaining;
-  }
-  public void SetTimerRunning(bool runTimer)
-  {
-    this.runTimer = runTimer;
   }
 }
