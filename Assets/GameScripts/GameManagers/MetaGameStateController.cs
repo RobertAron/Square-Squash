@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class MetaGameStateController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class MetaGameStateController : MonoBehaviour
   [SerializeField] GameObject gameOverScreen;
   [SerializeField] LevelUpAnimator levelUpAnimator;
   [SerializeField] Button pauseButton;
+  [SerializeField] TextMeshProUGUI textMeshText;
 
   bool isGamePaused = false;
   private void Start()
@@ -70,5 +72,6 @@ public class MetaGameStateController : MonoBehaviour
   }
   public void PauseToggle(){
     isGamePaused = !isGamePaused;
+    textMeshText.text = isGamePaused?"\uf04b":"\uf04c";
   }
 }
