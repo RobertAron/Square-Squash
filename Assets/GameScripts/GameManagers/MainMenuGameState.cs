@@ -18,6 +18,8 @@ public class MainMenuGameState : MonoBehaviour
     }
 		playerLevel = PlayerPrefs.GetInt(PrefKeys.playerLevel, 1);
     playerExp = PlayerPrefs.GetInt(PrefKeys.playerExp, 0);
+		PlayerPrefs.SetInt(PrefKeys.playerLevel, playerLevel);
+    PlayerPrefs.SetInt(PrefKeys.playerExp, playerExp);
   }
 
   #endregion
@@ -28,5 +30,10 @@ public class MainMenuGameState : MonoBehaviour
   public int GetExp(){
     return playerExp;
   }
+
+  [ContextMenu("Destory All Prefs")]
+	public void ResetPrefs(){
+		PlayerPrefs.DeleteAll();
+	}
 
 }

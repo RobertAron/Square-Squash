@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 965712393}
   - component: {fileID: 965712394}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: Level Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,8 +589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -296.66663}
-  m_SizeDelta: {x: 600, y: 533.3333}
+  m_AnchoredPosition: {x: 400, y: -196.66667}
+  m_SizeDelta: {x: 600, y: 333.33334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965712394
 MonoBehaviour:
@@ -644,8 +644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -392.76498}
-  m_SizeDelta: {x: 560, y: 241.1367}
+  m_AnchoredPosition: {x: 300, y: -242.76498}
+  m_SizeDelta: {x: 560, y: 141.13672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976138970
 MonoBehaviour:
@@ -732,7 +732,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 580, y: -20}
-  m_SizeDelta: {x: 560, y: 252.19662}
+  m_SizeDelta: {x: 560, y: 152.19662}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1389172825
 MonoBehaviour:
@@ -1096,8 +1096,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -583.3333}
-  m_SizeDelta: {x: 600, y: 133.33333}
+  m_AnchoredPosition: {x: 100, y: -383.33334}
+  m_SizeDelta: {x: 600, y: 83.333336}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1954634762
 GameObject:
@@ -1134,7 +1134,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 900}
+  m_SizeDelta: {x: 0, y: 600}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1954634764
 MonoBehaviour:
@@ -1213,7 +1213,7 @@ Prefab:
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -803.3333
+      value: -528.3334
       objectReference: {fileID: 0}
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}
@@ -1223,7 +1223,7 @@ Prefab:
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 133.33333
+      value: 83.333336
       objectReference: {fileID: 0}
     - target: {fileID: 224288352079119774, guid: 717d5c99a3205a24d8ffd98ce1d47822,
         type: 2}
