@@ -24,6 +24,7 @@ public class MetaGameStateController : MonoBehaviour
   [SerializeField] LevelUpAnimator levelUpAnimator;
   [SerializeField] Button pauseButton;
   [SerializeField] TextMeshProUGUI textMeshText;
+  [SerializeField] GameObject pauseScreen;
 
   bool isGamePaused = false;
   private void Start()
@@ -73,5 +74,6 @@ public class MetaGameStateController : MonoBehaviour
   public void PauseToggle(){
     isGamePaused = !isGamePaused;
     textMeshText.text = isGamePaused?"\uf04b":"\uf04c";
+    pauseScreen.SetActive(isGamePaused);
   }
 }
