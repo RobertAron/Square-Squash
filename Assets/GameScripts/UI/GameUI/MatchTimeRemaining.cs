@@ -17,10 +17,17 @@ public class MatchTimeRemaining : MonoBehaviour
 
   private void Update()
   {
-    TimeSpan timeSpan = TimeSpan.FromSeconds(timeTracker.GetTimeRemaining());
-    timeText.text = String.Format("{0:0}:{1:00}:{2:D2}",
-                                  timeSpan.Minutes,
-                                  timeSpan.Seconds,
-                                  timeSpan.Milliseconds / 10);
+    float timeRemaining = timeTracker.GetTimeRemaining();
+    if (timeRemaining != Mathf.Infinity)
+    {
+      TimeSpan timeSpan = TimeSpan.FromSeconds(timeRemaining);
+      timeText.text = String.Format("{0:0}:{1:00}:{2:D2}",
+                                    timeSpan.Minutes,
+                                    timeSpan.Seconds,
+                                    timeSpan.Milliseconds / 10);
+    }
+    else{
+      timeText.text = "";
+    }
   }
 }
