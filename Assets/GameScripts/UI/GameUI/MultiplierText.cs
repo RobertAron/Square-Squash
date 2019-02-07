@@ -6,9 +6,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Text),typeof(SpringyMove))]
 public class MultiplierText : MonoBehaviour {
 	Text text;
-	Vector3 startPos;
-	Vector3 topPoint;
-	Vector3 centerPoint;
 	Coroutine currentCoroutine;
 	SpringyMove springyMove;
 	public RectTransform parentRect;
@@ -16,9 +13,7 @@ public class MultiplierText : MonoBehaviour {
 	private void Start() {
 		text = GetComponent<Text>();
 		springyMove = GetComponent<SpringyMove>();
-		startPos = transform.position;
-		centerPoint = parentRect.localPosition;
-		topPoint = new Vector3(centerPoint.x,centerPoint.y+10f,transform.position.z);
+		
 	}
 
 	[ContextMenu("Test Move")]
@@ -35,6 +30,9 @@ public class MultiplierText : MonoBehaviour {
 	}
 
 	IEnumerator emphasizeMult(){
+		Vector3 startPos = transform.position;
+		Vector3 centerPoint = parentRect.localPosition;
+		Vector3 topPoint = new Vector3(centerPoint.x,centerPoint.y+10f,transform.position.z);
 		transform.position = topPoint;
 		springyMove.StartMove(centerPoint);
 		yield return new WaitForSeconds(1f);
