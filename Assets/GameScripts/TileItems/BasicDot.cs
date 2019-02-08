@@ -70,7 +70,7 @@ public class BasicDot : TileItem
   {
     for (int i = 0; i < ps.Length; i++)
     {
-      ps[i].Emit(1);
+      ps[i].Play();
     }
   }
 
