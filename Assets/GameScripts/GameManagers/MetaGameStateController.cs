@@ -22,8 +22,7 @@ public class MetaGameStateController : MonoBehaviour
   PointSystem pointsSystem;
   [SerializeField] GameObject gameOverScreen;
   [SerializeField] LevelUpAnimator levelUpAnimator;
-  [SerializeField] Button pauseButton;
-  [SerializeField] TextMeshProUGUI textMeshText;
+  [SerializeField] PauseButton pauseButton;
   [SerializeField] GameObject pauseScreen;
 
   bool isGamePaused = false;
@@ -37,7 +36,7 @@ public class MetaGameStateController : MonoBehaviour
 
   public void EndGame()
   {
-    pauseButton.interactable = false;
+    pauseButton.SetInteractable(false);
     gameOverScreen.SetActive(true);
     int pointsEarned = pointsSystem.GetCurrentPoints();
     int currentLevel = PlayerPrefs.GetInt(PrefKeys.playerLevel);
@@ -73,7 +72,8 @@ public class MetaGameStateController : MonoBehaviour
   }
   public void PauseToggle(){
     isGamePaused = !isGamePaused;
-    textMeshText.text = isGamePaused?"\uf04b":"\uf04c";
+    // textMeshText.text = isGamePaused?"\uf04b":"\uf04c";
+    pauseButton.SetImagePause(!isGamePaused);
     pauseScreen.SetActive(isGamePaused);
   }
 }
