@@ -11,7 +11,6 @@ public class PointSystem : MonoBehaviour
   MultiplierText multiplierText;
   [SerializeField]
   int pointValue = 0;
-  TimeTracker timeTracker;
   int currentMultiplier = 1;
 
 
@@ -30,14 +29,12 @@ public class PointSystem : MonoBehaviour
 	#endregion
 
   private void Start() {
-    timeTracker = TimeTracker.instance;
     scoreDisplay.HardSet(pointValue);
   }
 
   public void AddPoint()
   {
     pointValue += currentMultiplier;
-    timeTracker.IncreaseRemainingTime(0.01f);
     scoreDisplay.UpdateScore(pointValue);
   }
 
