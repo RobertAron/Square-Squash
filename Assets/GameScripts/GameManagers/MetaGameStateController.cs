@@ -76,4 +76,11 @@ public class MetaGameStateController : MonoBehaviour
     pauseButton.SetImagePause(!isGamePaused);
     pauseScreen.SetActive(isGamePaused);
   }
+  public void SetPauseState(bool newPauseState){
+    if(newPauseState!=isGamePaused) PauseToggle();
+  }
+
+  private void FixedUpdate() {
+    if(Input.GetKeyDown(KeyCode.Escape)) SetPauseState(true);
+  }
 }

@@ -10,7 +10,6 @@ public class PauseButton : MonoBehaviour {
 	public Image playButton;
 	private void Awake() {
 		button = GetComponent<Button>();
-
 	}
 	public void SetInteractable(bool interactableStatus){
 		button.interactable = interactableStatus;
