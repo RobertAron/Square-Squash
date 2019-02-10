@@ -16,7 +16,6 @@ public class TutorialGlowHelper : MonoBehaviour {
 	private void FixedUpdate() {
 		countedTime+=Time.fixedDeltaTime;
 		if(countedTime>=loopTime){
-			Debug.Log(countedTime>=loopTime);
 			countedTime-=loopTime;
 			ps.Stop();
 			ps.Clear();

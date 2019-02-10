@@ -10,6 +10,7 @@ public class LevelUpAnimator : MonoBehaviour
   [SerializeField] Image expRaidal;
   [SerializeField] Text expText;
   [SerializeField] ParticleSystem ps;
+  [SerializeField] Text finalScore;
   // Use this for initialization
   public void LevelUpAnimation(int startingLevel, int startingExp, int expGained)
   {
@@ -24,6 +25,7 @@ public class LevelUpAnimator : MonoBehaviour
     float totalExpToLevel = StaticCalcs.experienceToLevel(startingLevel);
     float accPerFrame = expGained / 300f;
     float diffPerFrame = 0;
+    float totalExpSoFar = 0;
     SetEXPText(currentLevel, expCurrent, totalExpToLevel);
     yield return new WaitForSeconds(1);
     while (expRemaining > 0)
@@ -40,9 +42,11 @@ public class LevelUpAnimator : MonoBehaviour
       }
       float expTillLevelUp = totalExpToLevel - expCurrent;
       float expThisFrame = Mathf.Min(expTillLevelUp, diffPerFrame, expRemaining);
+      totalExpSoFar += expThisFrame;
       expRemaining -= expThisFrame;
       expCurrent += expThisFrame;
       SetEXPText(currentLevel, expCurrent, totalExpToLevel);
+      finalScore.text = "FINAL SCORE:\n" + Mathf.Floor(totalExpSoFar);
       yield return new WaitForFixedUpdate();
     }
   }
