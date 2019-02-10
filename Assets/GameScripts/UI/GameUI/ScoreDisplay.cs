@@ -15,6 +15,7 @@ public class ScoreDisplay : MonoBehaviour {
 	}
 
 	public void UpdateScore(int newScore){
+		if(!this.isActiveAndEnabled) return;
 		if(currentCoroutine!=null){
       StopCoroutine(currentCoroutine);
     }
@@ -35,6 +36,7 @@ public class ScoreDisplay : MonoBehaviour {
 	}
 
 	void SetScoreTet(int scoreValue){
+		if(!this.isActiveAndEnabled) return;
 		textComonent.text = "Score: " + scoreValue;
 	}
 }
