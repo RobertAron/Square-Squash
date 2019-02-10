@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IntroSequence : MonoBehaviour {
 	// Use this for initialization
-	public float transitionTime = 0.5f;
+	public float transitionTime = 0.9f;
 	[SerializeField] SceneTransition st;
 	void Start () {
 		StartCoroutine(IntroSequenceCoroutine());

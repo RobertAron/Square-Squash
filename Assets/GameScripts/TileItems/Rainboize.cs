@@ -7,6 +7,7 @@ public class Rainboize : MonoBehaviour {
 	[SerializeField]
 	float speed = 1f;
 	float sawPosition;
+	float sinPosition;
 	int modBy;
 
 	private void Start() {
