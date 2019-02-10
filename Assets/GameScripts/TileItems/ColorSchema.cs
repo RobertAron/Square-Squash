@@ -19,6 +19,15 @@ public static class ColorSchema {
 
 	#endregion
 
+  public static ColorPalette[] standardColors= new ColorPalette[] {
+    ColorPalette.Pink,
+    ColorPalette.Orange,
+    ColorPalette.Red,
+    ColorPalette.Blue,
+    ColorPalette.Green,
+    ColorPalette.Purple
+  };
+
   // https://flatuicolors.com/palette/ca
   public static Color GetColor(ColorPalette color){
     if(color==ColorPalette.Pink)
