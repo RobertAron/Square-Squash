@@ -6,6 +6,7 @@ public class IntroSequence : MonoBehaviour {
 	// Use this for initialization
 	public float transitionTime = 0.9f;
 	[SerializeField] SceneTransition st;
+	[SerializeField] GameObject[] countDownObjects;
 	void Start () {
 		StartCoroutine(IntroSequenceCoroutine());
 	}
@@ -15,9 +16,19 @@ public class IntroSequence : MonoBehaviour {
 			mgsc.HardSetPause(true);
 		}
 		st.TransitionIn(transitionTime);
-		yield return new WaitForSeconds(transitionTime);
+		yield return new WaitForSeconds(transitionTime*0.8f);
+		if(countDownObjects!=null){
+			for(int i=0;i<countDownObjects.Length;i++){
+				countDownObjects[i].SetActive(true);
+				yield return new WaitForSeconds(0.3f);
+			}
+			yield return new WaitForSeconds(0.4f);
+			for(int i=0;i<countDownObjects.Length;i++){
+				countDownObjects[i].SetActive(false);
+			}
+		}
 		if(mgsc!=null){
-			mgsc.HardSetPause(false);
+			mgsc.SetPauseState(false);
 		}
 	}
 }

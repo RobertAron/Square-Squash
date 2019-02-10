@@ -23,19 +23,19 @@ public class ScoreDisplay : MonoBehaviour {
 	}
 
 	public void HardSet(int newScore){
-		SetScoreTet(newScore);
+		SetScoreText(newScore);
 	}
 
 	IEnumerator UpdateAnimation(float updateTo){
 		speed = (updateTo-currentScore)*5;
 		while(currentScore!=updateTo){
 			currentScore = Mathf.MoveTowards(currentScore,updateTo,speed*Time.deltaTime);
-			SetScoreTet((int)Mathf.Floor(currentScore));
+			SetScoreText((int)Mathf.Floor(currentScore));
 			yield return null;
 		}
 	}
 
-	void SetScoreTet(int scoreValue){
+	void SetScoreText(int scoreValue){
 		if(!this.isActiveAndEnabled) return;
 		textComonent.text = "Score: " + scoreValue;
 	}
