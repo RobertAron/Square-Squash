@@ -12,6 +12,6 @@ public class SpringOnEnabled : MonoBehaviour {
 	private void OnEnable() {
 		Vector3 getTo = transform.position;
 		transform.position = new Vector3(transform.position.x,10,transform.position.z);
-		springyMove.StartMove(getTo); 
+		springyMove.StartMove(getTo);
 	}
 }
