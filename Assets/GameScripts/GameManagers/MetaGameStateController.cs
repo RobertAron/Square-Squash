@@ -71,13 +71,20 @@ public class MetaGameStateController : MonoBehaviour
     }
   }
   public void PauseToggle(){
-    isGamePaused = !isGamePaused;
+    SetPause(!isGamePaused);
     // textMeshText.text = isGamePaused?"\uf04b":"\uf04c";
     pauseButton.SetImagePause(!isGamePaused);
     pauseScreen.SetActive(isGamePaused);
   }
   public void SetPauseState(bool newPauseState){
     if(newPauseState!=isGamePaused) PauseToggle();
+  }
+  public void HardSetPause(bool pauseSet){
+    isGamePaused = pauseSet;
+  }
+
+  void SetPause(bool pauseState){
+    isGamePaused = pauseState;
   }
 
   private void FixedUpdate() {
