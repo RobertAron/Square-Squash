@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Rainboize : MonoBehaviour {
 	Material material;
-	[SerializeField]
-	float speed = 1f;
+	float speed = 0.4f;
 	float sawPosition;
 	float sinPosition;
 	int modBy;

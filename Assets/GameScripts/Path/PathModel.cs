@@ -15,18 +15,31 @@ public class PathModel : MonoBehaviour
   void AddToPath(TileSlot slot){
     path.Add(slot);
     slot.GetItem().EmphasizeItem();
+    ResetPathColor();
   }
   public void SetInitialSlot(TileSlot initialSlot)
   {
     ColorPalette itemType = initialSlot.GetItemType();
+    Debug.Log(itemType);
     path.Clear();
     if (itemType == ColorPalette.None) return;
     AddToPath(initialSlot);
     pathColor = itemType;
     AndroidVibrate.Vibrate(40);
   }
+
+  void ResetPathColor(){
+    pathColor = ColorPalette.All;
+    foreach(TileSlot ts in path){
+      if(ts.GetItemType()!=ColorPalette.All){
+        pathColor = ts.GetItemType();
+        break;
+      }
+    }
+  }
   public void AttemptAddPath(TileSlot newTile)
   {
+    ResetPathColor();
     // Don't add to empty path
     if (path.Count == 0) return;
     // No doubling back
@@ -35,12 +48,16 @@ public class PathModel : MonoBehaviour
     ColorPalette itemType = newTile.GetItemType();
     TileSlot lastSlot = path[path.Count - 1];
     // Item must be the same color as the path, or must be 'all'
-    if (itemType != ColorPalette.All && itemType != pathColor) return;
-
+    Debug.Log("pre");
+    Debug.Log(itemType != ColorPalette.All);
+    Debug.Log(itemType != pathColor);
+    if (itemType != ColorPalette.All && (itemType != pathColor && pathColor!= ColorPalette.All)) return;
+    Debug.Log("post");
     // If last item, remove last item
     if (lastSlot == newTile && path.Count > 1)
     {
       path.RemoveAt(path.Count - 1);
+      ResetPathColor();
       AndroidVibrate.Vibrate(40);
       return;
     }

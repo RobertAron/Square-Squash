@@ -24,8 +24,10 @@ public class PathDrawer : MonoBehaviour {
 		pathLocations.Add(pos);
 
 		Color currentColor = ColorSchema.GetColor(pathModel.GetPathColor());
+		if(currentColor!=ColorSchema.GetColor(ColorPalette.None)){
+			renderer.material.color =  currentColor;
+		}
 		
-		renderer.material.color =  currentColor;
 		for(int i=0;i<pathLocations.Count;i++){
 			lineRenderer.SetNewPath(pathLocations.ToArray());
 		}

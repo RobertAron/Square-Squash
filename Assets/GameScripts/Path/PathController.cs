@@ -20,7 +20,7 @@ public class PathController : MonoBehaviour
   public void InitialPress(Vector3 pressLocation)
   {
     TileSlot tileSlot = RaycastForTileSlot(pressLocation);
-    if(tileSlot==null || tileSlot.GetItemType() == ColorPalette.All || tileSlot.GetItemType() == ColorPalette.None) return;
+    if(tileSlot==null || tileSlot.GetItemType() == ColorPalette.None) return;
     lastHoverHeld = tileSlot;
     pathModel.SetInitialSlot(tileSlot);
   }
