@@ -34,8 +34,7 @@ public class GetTopScores : MonoBehaviour
 
   IEnumerator GetRequest(string uri)
   {
-    Debug.Log("Starting network call");
-    Debug.Log(uri);
+    Debug.Log("Getting top scores...");
     using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
     {
       yield return webRequest.SendWebRequest();
@@ -45,11 +44,10 @@ public class GetTopScores : MonoBehaviour
       }
       else
       {
+        Debug.Log("Got top scores!");
         loadingObject.SetActive(false);
         scorePopulator.gameObject.SetActive(true);
-        Debug.Log(webRequest.downloadHandler.text);
 				TopScoresResponse tsr = TopScoresResponse.CreateFromJSON(webRequest.downloadHandler.text);
-				Debug.Log(tsr.scores[0].playerName);
         foreach(Scores score in tsr.scores){
           scorePopulator.AddNewScore(score.position,score.playerName,score.score);
         }

@@ -40,8 +40,6 @@ public class UpdatePlayerData : MonoBehaviour
     string playerName = PlayerPrefs.GetString(PrefKeys.playerName);
 		UpdatePost updateBody = new UpdatePost(playerId,playerName,bestScore);
 		string body = JsonUtility.ToJson(updateBody);
-		Debug.Log("Update score body");
-		Debug.Log(body);
     string updateEndpoint = "https://el6rwisdci.execute-api.us-east-1.amazonaws.com/dev/score";
     using (UnityWebRequest webRequest = UnityWebRequest.Post(updateEndpoint,body))
     {
@@ -51,15 +49,7 @@ public class UpdatePlayerData : MonoBehaviour
 			webRequest.downloadHandler = (DownloadHandler) new DownloadHandlerBuffer();
 			webRequest.SetRequestHeader("Content-Type", "application/json");
       yield return webRequest.SendWebRequest();
-      if (webRequest.isNetworkError || webRequest.responseCode != 200)
-      {
-        Debug.Log("A network error occurred");
-				Debug.Log(webRequest.downloadHandler.text);
-      }
-      else
-      {
-				Debug.Log(webRequest.downloadHandler.text);
-      }
+			Debug.Log(webRequest.downloadHandler.text);
     }
   }
 
