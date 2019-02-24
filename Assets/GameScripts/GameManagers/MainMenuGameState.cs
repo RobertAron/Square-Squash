@@ -45,4 +45,8 @@ public class MainMenuGameState : MonoBehaviour
 		PlayerPrefs.DeleteAll();
 	}
 
+  private void Update() {
+    if(Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+  }
+
 }
