@@ -24,6 +24,7 @@ public class MetaGameStateController : MonoBehaviour
   [SerializeField] LevelUpAnimator levelUpAnimator;
   [SerializeField] PauseButton pauseButton;
   [SerializeField] GameObject pauseScreen;
+  [SerializeField] UpdatePlayerData upd;
 
   bool isGamePaused = false;
   private void Start()
@@ -43,6 +44,10 @@ public class MetaGameStateController : MonoBehaviour
     int currentExp = PlayerPrefs.GetInt(PrefKeys.playerExp);;
     levelUpAnimator.LevelUpAnimation(currentLevel,currentExp,pointsSystem.GetCurrentPoints());
     UpdatePlayerExp(pointsEarned);
+    int bestScore = PlayerPrefs.GetInt(PrefKeys.bestScore);
+    if(bestScore<pointsEarned){
+      upd.SetPlayerHighScore(pointsEarned);
+    }
     isGamePaused = true;
   }
 

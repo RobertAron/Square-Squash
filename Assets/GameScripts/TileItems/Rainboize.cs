@@ -8,7 +8,7 @@ public class Rainboize : MonoBehaviour {
 	float sawPosition;
 	float sinPosition;
 	int modBy;
-
+	[SerializeField] PathModel pathModel;
 	private void Start() {
 		material = gameObject.GetComponent<Renderer>().material;
 		modBy = (int) Mathf.Ceil(100/speed);
@@ -16,7 +16,9 @@ public class Rainboize : MonoBehaviour {
 
 	void Update () {
 		UpdateSawPosition();
-		material.color = Color.HSVToRGB(sawPosition,0.38f,1);
+		if(pathModel==null||pathModel.GetPathColor()==ColorPalette.All){
+			material.color = Color.HSVToRGB(sawPosition,0.38f,1);
+		}
 	}
 	void UpdateSawPosition(){
 		sawPosition = (Time.frameCount % modBy)/(float)modBy;
