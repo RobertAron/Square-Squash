@@ -25,7 +25,8 @@ class Scores
 
 public class GetTopScores : MonoBehaviour
 {
-  // Use this for initialization
+  [SerializeField] GameObject loadingObject;
+  [SerializeField] ScorePopulator scorePopulator;
   void Start()
   {
     StartCoroutine(GetRequest("https://el6rwisdci.execute-api.us-east-1.amazonaws.com/dev/score/"+PlayerPrefs.GetString(PrefKeys.playerID)));
@@ -44,9 +45,14 @@ public class GetTopScores : MonoBehaviour
       }
       else
       {
+        loadingObject.SetActive(false);
+        scorePopulator.gameObject.SetActive(true);
         Debug.Log(webRequest.downloadHandler.text);
 				TopScoresResponse tsr = TopScoresResponse.CreateFromJSON(webRequest.downloadHandler.text);
 				Debug.Log(tsr.scores[0].playerName);
+        foreach(Scores score in tsr.scores){
+          scorePopulator.AddNewScore(score.position,score.playerName,score.score);
+        }
       }
     }
   }

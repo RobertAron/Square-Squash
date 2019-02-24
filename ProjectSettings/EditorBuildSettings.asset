@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: 99d83d5014e952547b9dfef5fd18e91c
+  - enabled: 1
+    path: Assets/Scenes/TopScoresScreen.unity
+    guid: d37c7045685d6cf44994632b1bd67f6a
   m_configObjects: {}
