@@ -10,7 +10,9 @@ public class UpdateUsernameUI : MonoBehaviour {
 	public void UpdateUsername(){
 		Debug.Log("called to update user name with...");
 		Debug.Log(newUsername.text);
-		PlayerPrefs.SetString(PrefKeys.playerName,newUsername.text);
-		upd.SetPlayerName(newUsername.text);
+		if(newUsername.text.Length!=0){
+			PlayerPrefs.SetString(PrefKeys.playerName,newUsername.text);
+			upd.SetPlayerName(newUsername.text);
+		}
 	}
 }
