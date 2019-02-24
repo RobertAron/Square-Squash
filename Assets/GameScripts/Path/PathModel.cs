@@ -20,7 +20,6 @@ public class PathModel : MonoBehaviour
   public void SetInitialSlot(TileSlot initialSlot)
   {
     ColorPalette itemType = initialSlot.GetItemType();
-    Debug.Log(itemType);
     path.Clear();
     if (itemType == ColorPalette.None) return;
     AddToPath(initialSlot);
@@ -48,11 +47,7 @@ public class PathModel : MonoBehaviour
     ColorPalette itemType = newTile.GetItemType();
     TileSlot lastSlot = path[path.Count - 1];
     // Item must be the same color as the path, or must be 'all'
-    Debug.Log("pre");
-    Debug.Log(itemType != ColorPalette.All);
-    Debug.Log(itemType != pathColor);
     if (itemType != ColorPalette.All && (itemType != pathColor && pathColor!= ColorPalette.All)) return;
-    Debug.Log("post");
     // If last item, remove last item
     if (lastSlot == newTile && path.Count > 1)
     {

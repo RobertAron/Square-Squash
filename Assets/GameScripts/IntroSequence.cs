@@ -17,7 +17,7 @@ public class IntroSequence : MonoBehaviour {
 		}
 		st.TransitionIn(transitionTime);
 		yield return new WaitForSeconds(transitionTime*0.8f);
-		if(countDownObjects!=null){
+		if(countDownObjects!=null && countDownObjects.Length!=0){
 			for(int i=0;i<countDownObjects.Length;i++){
 				countDownObjects[i].SetActive(true);
 				yield return new WaitForSeconds(0.3f);

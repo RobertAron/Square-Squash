@@ -7,6 +7,9 @@ public class MainMenuGameState : MonoBehaviour
   
 	int playerLevel;
   int playerExp;
+  string playerID;
+  string playerName;
+  int playerBestScore;
 	
   #region  Singleton
   public static MainMenuGameState instance;
@@ -18,8 +21,14 @@ public class MainMenuGameState : MonoBehaviour
     }
 		playerLevel = PlayerPrefs.GetInt(PrefKeys.playerLevel, 1);
     playerExp = PlayerPrefs.GetInt(PrefKeys.playerExp, 0);
+    playerID = PlayerPrefs.GetString(PrefKeys.playerID,System.Guid.NewGuid().ToString());
+    playerName = PlayerPrefs.GetString(PrefKeys.playerName,"Anonymous");
+    playerBestScore = PlayerPrefs.GetInt(PrefKeys.bestScore, 0);
 		PlayerPrefs.SetInt(PrefKeys.playerLevel, playerLevel);
     PlayerPrefs.SetInt(PrefKeys.playerExp, playerExp);
+    PlayerPrefs.SetString(PrefKeys.playerID, playerID);
+    PlayerPrefs.SetString(PrefKeys.playerName,playerName);
+    PlayerPrefs.SetInt(PrefKeys.bestScore,playerBestScore);
   }
 
   #endregion
