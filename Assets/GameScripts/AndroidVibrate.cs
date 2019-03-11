@@ -18,12 +18,14 @@ public class AndroidVibrate
 
   public static void Vibrate(long milliseconds)
   {
+    iOSHapticFeedback.Instance.Trigger(iOSHapticFeedback.iOSFeedbackType.ImpactMedium);
     if (Vibrator == null) return;
     Vibrator.Call("vibrate", milliseconds);
   }
 
   public static void Vibrate(long[] pattern, int repeat)
   {
+    iOSHapticFeedback.Instance.Trigger(iOSHapticFeedback.iOSFeedbackType.ImpactMedium);
     if (Vibrator == null) return;
     Vibrator.Call("vibrate", pattern, repeat);
   }
